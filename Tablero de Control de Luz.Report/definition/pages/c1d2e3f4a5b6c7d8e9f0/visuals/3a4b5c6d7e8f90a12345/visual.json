@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "3a4b5c6d7e8f90a12345",
+  "position": { "x": 12, "y": 200, "z": 3, "height": 22, "width": 1256, "tabOrder": 3 },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "PERIODO SELECCIONADO  ·  responde al segmentador de fecha",
+                    "textStyle": { "fontFamily": "Segoe UI Semibold", "fontSize": "12px", "fontWeight": "bold", "color": "#0F766E" }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

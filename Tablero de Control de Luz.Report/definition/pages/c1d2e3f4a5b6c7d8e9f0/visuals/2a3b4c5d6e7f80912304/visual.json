@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "2a3b4c5d6e7f80912304",
+  "position": { "x": 12, "y": 82, "z": 2, "height": 22, "width": 1256, "tabOrder": 2 },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "TOTAL ACUMULADO HISTÓRICO  ·  no se ve afectado por el filtro de fecha",
+                    "textStyle": { "fontFamily": "Segoe UI Semibold", "fontSize": "12px", "fontWeight": "bold", "color": "#1E3A8A" }
+                  }
+                ],
+                "horizontalTextAlignment": "left"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

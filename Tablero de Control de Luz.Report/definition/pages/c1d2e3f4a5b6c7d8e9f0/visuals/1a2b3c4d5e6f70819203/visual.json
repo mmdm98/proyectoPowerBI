@@ -1,0 +1,67 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "1a2b3c4d5e6f70819203",
+  "position": { "x": 830, "y": 8, "z": 1, "height": 70, "width": 438, "tabOrder": 1 },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": { "SourceRef": { "Entity": "DimCalendario" } },
+                  "Property": "Año"
+                }
+              },
+              "queryRef": "DimCalendario.Año",
+              "nativeQueryRef": "Año",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": { "SourceRef": { "Entity": "DimCalendario" } },
+                  "Property": "Mes"
+                }
+              },
+              "queryRef": "DimCalendario.Mes",
+              "nativeQueryRef": "Mes",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": { "SourceRef": { "Entity": "DimCalendario" } },
+                  "Property": "Dia"
+                }
+              },
+              "queryRef": "DimCalendario.Dia",
+              "nativeQueryRef": "Dia",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": { "expr": { "Literal": { "Value": "'Dropdown'" } } }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": { "expr": { "Literal": { "Value": "true" } } },
+            "text": { "expr": { "Literal": { "Value": "'Filtrar por fecha (Año / Mes / Día)'" } } }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

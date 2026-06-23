@@ -147,6 +147,52 @@ table 01_Medidas
 		formatString: 0
 		lineageTag: f6a7b8c9-d0e1-2345-f012-567890123456
 
+	/// Versión histórica (acumulado total). Inmune al filtro del segmentador de fecha vía REMOVEFILTERS(DimCalendario).
+	measure 'Base de Datos (Histórico)' = CALCULATE([Base de Datos], REMOVEFILTERS(DimCalendario))
+		formatString: 0
+		lineageTag: 1a000001-0000-4000-8000-000000000001
+
+	measure 'Contactados (Histórico)' = CALCULATE([Contactados], REMOVEFILTERS(DimCalendario))
+		formatString: 0
+		lineageTag: 1a000002-0000-4000-8000-000000000002
+
+	measure 'Cortaron Comunicación (Histórico)' = CALCULATE([Cortaron Comunicación], REMOVEFILTERS(DimCalendario))
+		formatString: 0
+		lineageTag: 1a000003-0000-4000-8000-000000000003
+
+	measure 'Interactuaron con Luz (Histórico)' = CALCULATE([Interactuaron con Luz], REMOVEFILTERS(DimCalendario))
+		formatString: 0
+		lineageTag: 1a000004-0000-4000-8000-000000000004
+
+	measure 'Solicitaron Conexión (Histórico)' = CALCULATE([Solicitaron Conexión], REMOVEFILTERS(DimCalendario))
+		formatString: 0
+		lineageTag: 1a000005-0000-4000-8000-000000000005
+
+	measure 'Avisarán al Normalizar (Histórico)' = CALCULATE([Avisarán al Normalizar], REMOVEFILTERS(DimCalendario))
+		formatString: 0
+		lineageTag: 1a000006-0000-4000-8000-000000000006
+
+	/// Porcentajes históricos: numerador y denominador inmunes a la fecha, devuelven la proporción sobre la base total acumulada.
+	measure '% Contactados (Histórico)' = CALCULATE([% Contactados], REMOVEFILTERS(DimCalendario))
+		formatString: 0.0%
+		lineageTag: 1b000001-0000-4000-8000-000000000011
+
+	measure '% Cortaron Comunicación (Histórico)' = CALCULATE([% Cortaron Comunicación], REMOVEFILTERS(DimCalendario))
+		formatString: 0.0%
+		lineageTag: 1b000002-0000-4000-8000-000000000012
+
+	measure '% Interactuaron con Luz (Histórico)' = CALCULATE([% Interactuaron con Luz], REMOVEFILTERS(DimCalendario))
+		formatString: 0.0%
+		lineageTag: 1b000003-0000-4000-8000-000000000013
+
+	measure '% Solicitaron Conexión (Histórico)' = CALCULATE([% Solicitaron Conexión], REMOVEFILTERS(DimCalendario))
+		formatString: 0.0%
+		lineageTag: 1b000004-0000-4000-8000-000000000014
+
+	measure '% Avisarán al Normalizar (Histórico)' = CALCULATE([% Avisarán al Normalizar], REMOVEFILTERS(DimCalendario))
+		formatString: 0.0%
+		lineageTag: 1b000005-0000-4000-8000-000000000015
+
 	column Dummy
 		lineageTag: 40d71262-83ef-4e63-a3f3-e261057cbe42
 		summarizeBy: none

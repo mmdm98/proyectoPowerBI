@@ -72,6 +72,81 @@ table 01_Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure '% Sentimiento Positivo/Neutral' =
+			VAR TotalValidos = CALCULATE(
+			    COUNT(output[Sentimiento Cliente]),
+			    output[Sentimiento Cliente] <> "-"
+			)
+			VAR TotalPositivosNeutrales = CALCULATE(
+			    COUNT(output[Sentimiento Cliente]),
+			    output[Sentimiento Cliente] IN {"Positivo", "Neutral"}
+			)
+			RETURN DIVIDE(TotalPositivosNeutrales, TotalValidos, 0)
+		formatString: 0.0%
+		lineageTag: f1e2d3c4-b5a6-7890-abcd-ef1234567890
+
+	measure '% Interrupciones (Barge-in)' =
+			VAR TotalValidos = CALCULATE(
+			    COUNT(output[Interrupcion Al Bot]),
+			    output[Interrupcion Al Bot] <> "-"
+			)
+			VAR TotalInterrupciones = CALCULATE(
+			    COUNT(output[Interrupcion Al Bot]),
+			    output[Interrupcion Al Bot] = "Sí"
+			)
+			RETURN DIVIDE(TotalInterrupciones, TotalValidos, 0)
+		formatString: 0.0%
+		lineageTag: a1b2c3d4-e5f6-7890-abcd-012345678901
+
+	measure '% Carga al 0800' =
+			VAR TotalValidos = CALCULATE(
+			    COUNT(output[Menciona 0800]),
+			    output[Menciona 0800] <> "-"
+			)
+			VAR TotalMenciones = CALCULATE(
+			    COUNT(output[Menciona 0800]),
+			    output[Menciona 0800] = "Sí"
+			)
+			RETURN DIVIDE(TotalMenciones, TotalValidos, 0)
+		formatString: 0.0%
+		lineageTag: b2c3d4e5-f6a7-8901-bcde-123456789012
+
+	measure 'Fricción - Segundos Iniciales' =
+			CALCULATE(
+			    COUNT(output[Interactores]),
+			    output[Interactores] = "No",
+			    output[Motivo No Entrega] = "corta la llamada"
+			)
+		formatString: 0
+		lineageTag: c3d4e5f6-a7b8-9012-cdef-234567890123
+
+	measure 'Fricción - Antes de completar el mensaje' =
+			CALCULATE(
+			    COUNT(output[Interactores]),
+			    output[Interactores] = "No",
+			    output[Motivo No Entrega] IN {"error técnico", "interrupciones"}
+			)
+		formatString: 0
+		lineageTag: d4e5f6a7-b8c9-0123-def0-345678901234
+
+	measure 'Fricción - Buzón de Voz / Contestador' =
+			CALCULATE(
+			    COUNT(output[Interactores]),
+			    output[Interactores] = "No",
+			    output[Motivo No Entrega] = "contestador"
+			)
+		formatString: 0
+		lineageTag: e5f6a7b8-c9d0-1234-ef01-456789012345
+
+	measure 'Fricción - Otras Causas' =
+			CALCULATE(
+			    COUNT(output[Interactores]),
+			    output[Interactores] = "No",
+			    NOT(output[Motivo No Entrega] IN {"corta la llamada", "error técnico", "interrupciones", "contestador"})
+			)
+		formatString: 0
+		lineageTag: f6a7b8c9-d0e1-2345-f012-567890123456
+
 	column Dummy
 		lineageTag: 40d71262-83ef-4e63-a3f3-e261057cbe42
 		summarizeBy: none

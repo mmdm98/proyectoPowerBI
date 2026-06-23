@@ -1,0 +1,132 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "e7f8a9b0c1d2e3f4a5b6",
+  "position": {
+    "x": 645,
+    "y": 130,
+    "z": 4,
+    "height": 580,
+    "width": 625,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Cortaron Comunicación"
+                }
+              },
+              "queryRef": "01_Medidas.Cortaron Comunicación",
+              "nativeQueryRef": "Cortaron Comunicación"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Fricción - Segundos Iniciales"
+                }
+              },
+              "queryRef": "01_Medidas.Fricción - Segundos Iniciales",
+              "nativeQueryRef": "Fricción - Segundos Iniciales"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Fricción - Antes de completar el mensaje"
+                }
+              },
+              "queryRef": "01_Medidas.Fricción - Antes de completar el mensaje",
+              "nativeQueryRef": "Fricción - Antes de completar el mensaje"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Fricción - Buzón de Voz / Contestador"
+                }
+              },
+              "queryRef": "01_Medidas.Fricción - Buzón de Voz / Contestador",
+              "nativeQueryRef": "Fricción - Buzón de Voz / Contestador"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Fricción - Otras Causas"
+                }
+              },
+              "queryRef": "01_Medidas.Fricción - Otras Causas",
+              "nativeQueryRef": "Fricción - Otras Causas"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                "Property": "Cortaron Comunicación"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": { "expr": { "Literal": { "Value": "'vega'" } } },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega/v5.json\",\n  \"width\": 590,\n  \"height\": 530,\n  \"padding\": 10,\n  \"autosize\": \"none\",\n  \"background\": \"#0f172a\",\n  \"data\": [\n    {\"name\": \"dataset\"},\n    {\n      \"name\": \"pie\",\n      \"values\": [\n        {\"label\": \"Seg. Iniciales\",     \"colorVal\": \"#ef4444\", \"key\": \"Fricción - Segundos Iniciales\"},\n        {\"label\": \"Antes del Mensaje\", \"colorVal\": \"#f97316\", \"key\": \"Fricción - Antes de completar el mensaje\"},\n        {\"label\": \"Buzón de Voz\",      \"colorVal\": \"#eab308\", \"key\": \"Fricción - Buzón de Voz / Contestador\"},\n        {\"label\": \"Otras Causas\",      \"colorVal\": \"#64748b\", \"key\": \"Fricción - Otras Causas\"}\n      ],\n      \"transform\": [\n        {\"type\": \"formula\", \"as\": \"value\", \"expr\": \"datum.key == ''Fricción - Segundos Iniciales'' ? vSeg : datum.key == ''Fricción - Antes de completar el mensaje'' ? vAntes : datum.key == ''Fricción - Buzón de Voz / Contestador'' ? vBuzon : vOtras\"},\n        {\"type\": \"pie\", \"field\": \"value\"}\n      ]\n    }\n  ],\n  \"signals\": [\n    {\"name\": \"hasData\", \"update\": \"length(data(''dataset'')) > 0\"},\n    {\"name\": \"vTotal\", \"update\": \"hasData ? data(''dataset'')[0][''Cortaron Comunicación''] : 0\"},\n    {\"name\": \"vSeg\",   \"update\": \"hasData ? data(''dataset'')[0][''Fricción - Segundos Iniciales''] : 0\"},\n    {\"name\": \"vAntes\", \"update\": \"hasData ? data(''dataset'')[0][''Fricción - Antes de completar el mensaje''] : 0\"},\n    {\"name\": \"vBuzon\", \"update\": \"hasData ? data(''dataset'')[0][''Fricción - Buzón de Voz / Contestador''] : 0\"},\n    {\"name\": \"vOtras\", \"update\": \"hasData ? data(''dataset'')[0][''Fricción - Otras Causas''] : 0\"}\n  ],\n  \"marks\": [\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 300}, \"y\": {\"value\": 26}, \"align\": {\"value\": \"center\"}, \"fontSize\": {\"value\": 18}, \"fontWeight\": {\"value\": \"bold\"}, \"fill\": {\"value\": \"#e2e8f0\"}, \"text\": {\"value\": \"Desglose de Fricción\"}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 300}, \"y\": {\"value\": 46}, \"align\": {\"value\": \"center\"}, \"fontSize\": {\"value\": 12}, \"fill\": {\"value\": \"#64748b\"}, \"text\": {\"signal\": \"''Total Cortaron Comunicación: '' + format(vTotal, '','')\"}}}},\n    {\"type\": \"arc\", \"from\": {\"data\": \"pie\"}, \"encode\": {\n      \"enter\": {\n        \"x\": {\"value\": 210}, \"y\": {\"value\": 270},\n        \"startAngle\": {\"field\": \"startAngle\"}, \"endAngle\": {\"field\": \"endAngle\"},\n        \"innerRadius\": {\"value\": 90}, \"outerRadius\": {\"value\": 160},\n        \"fill\": {\"field\": \"colorVal\"}, \"stroke\": {\"value\": \"#0f172a\"}, \"strokeWidth\": {\"value\": 3},\n        \"tooltip\": {\"signal\": \"{''Motivo'': datum.label, ''Cantidad'': format(datum.value, '',''), ''Porcentaje'': format(datum.value / max(vTotal, 1), ''.1%'')}\"}\n      }\n    }},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 210}, \"y\": {\"value\": 263}, \"align\": {\"value\": \"center\"}, \"fontSize\": {\"value\": 24}, \"fontWeight\": {\"value\": \"bold\"}, \"fill\": {\"value\": \"#e2e8f0\"}, \"text\": {\"signal\": \"format(vTotal, '','')\"}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 210}, \"y\": {\"value\": 283}, \"align\": {\"value\": \"center\"}, \"fontSize\": {\"value\": 12}, \"fill\": {\"value\": \"#94a3b8\"}, \"text\": {\"value\": \"Cortaron\"}}}},\n    {\"type\": \"rect\", \"from\": {\"data\": \"pie\"}, \"encode\": {\"update\": {\"x\": {\"value\": 400}, \"y\": {\"signal\": \"160 + datum.index * 45\"}, \"width\": {\"value\": 16}, \"height\": {\"value\": 16}, \"cornerRadius\": {\"value\": 3}, \"fill\": {\"field\": \"colorVal\"}}}},\n    {\"type\": \"text\",  \"from\": {\"data\": \"pie\"}, \"encode\": {\"update\": {\"x\": {\"value\": 424}, \"y\": {\"signal\": \"172 + datum.index * 45\"}, \"fontSize\": {\"value\": 12}, \"fontWeight\": {\"value\": \"bold\"}, \"fill\": {\"field\": \"colorVal\"}, \"text\": {\"signal\": \"datum.label\"}}}},\n    {\"type\": \"text\",  \"from\": {\"data\": \"pie\"}, \"encode\": {\"update\": {\"x\": {\"value\": 424}, \"y\": {\"signal\": \"186 + datum.index * 45\"}, \"fontSize\": {\"value\": 11}, \"fill\": {\"value\": \"#94a3b8\"}, \"text\": {\"signal\": \"format(datum.value, '','') + ''  ('' + format(datum.value / max(vTotal, 1), ''.1%'') + '')''\"}}}\n  ]\n}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"autosize\": {\"contains\": \"padding\", \"type\": \"fit\"}}'"
+                }
+              }
+            },
+            "enableTooltips": { "expr": { "Literal": { "Value": "true" } } },
+            "enableContextMenu": { "expr": { "Literal": { "Value": "true" } } },
+            "enableHighlight": { "expr": { "Literal": { "Value": "true" } } },
+            "enableSelection": { "expr": { "Literal": { "Value": "true" } } },
+            "selectionMaxDataPoints": { "expr": { "Literal": { "Value": "50D" } } },
+            "selectionMode": { "expr": { "Literal": { "Value": "'simple'" } } },
+            "version": { "expr": { "Literal": { "Value": "'6.2.0'" } } }
+          }
+        }
+      ],
+      "editor": [
+        {
+          "properties": {
+            "theme": { "expr": { "Literal": { "Value": "'dark'" } } }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": { "expr": { "Literal": { "Value": "'1.9.1.0'" } } }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

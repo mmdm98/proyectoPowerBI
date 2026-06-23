@@ -1,0 +1,152 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "d6e7f8a9b0c1d2e3f4a5",
+  "position": {
+    "x": 10,
+    "y": 130,
+    "z": 3,
+    "height": 580,
+    "width": 620,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Base de Datos"
+                }
+              },
+              "queryRef": "01_Medidas.Base de Datos",
+              "nativeQueryRef": "Base de Datos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Contactados"
+                }
+              },
+              "queryRef": "01_Medidas.Contactados",
+              "nativeQueryRef": "Contactados"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Interactuaron con Luz"
+                }
+              },
+              "queryRef": "01_Medidas.Interactuaron con Luz",
+              "nativeQueryRef": "Interactuaron con Luz"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Solicitaron Conexión"
+                }
+              },
+              "queryRef": "01_Medidas.Solicitaron Conexión",
+              "nativeQueryRef": "Solicitaron Conexión"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "% Contactados"
+                }
+              },
+              "queryRef": "01_Medidas.% Contactados",
+              "nativeQueryRef": "% Contactados"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "% Interactuaron con Luz"
+                }
+              },
+              "queryRef": "01_Medidas.% Interactuaron con Luz",
+              "nativeQueryRef": "% Interactuaron con Luz"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "% Solicitaron Conexión"
+                }
+              },
+              "queryRef": "01_Medidas.% Solicitaron Conexión",
+              "nativeQueryRef": "% Solicitaron Conexión"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                "Property": "Base de Datos"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": { "expr": { "Literal": { "Value": "'vega'" } } },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega/v5.json\",\n  \"width\": 580,\n  \"height\": 530,\n  \"padding\": 10,\n  \"autosize\": \"none\",\n  \"background\": \"#0f172a\",\n  \"data\": [{\"name\": \"dataset\"}],\n  \"signals\": [\n    {\"name\": \"hasData\", \"update\": \"length(data(''dataset'')) > 0\"},\n    {\"name\": \"vBase\", \"update\": \"hasData ? data(''dataset'')[0][''Base de Datos''] : 0\"},\n    {\"name\": \"vCont\", \"update\": \"hasData ? data(''dataset'')[0][''Contactados''] : 0\"},\n    {\"name\": \"vLuz\",  \"update\": \"hasData ? data(''dataset'')[0][''Interactuaron con Luz''] : 0\"},\n    {\"name\": \"vCon\",  \"update\": \"hasData ? data(''dataset'')[0][''Solicitaron Conexión''] : 0\"},\n    {\"name\": \"pCont\", \"update\": \"hasData ? data(''dataset'')[0][''% Contactados''] : 0\"},\n    {\"name\": \"pLuz\",  \"update\": \"hasData ? data(''dataset'')[0][''% Interactuaron con Luz''] : 0\"},\n    {\"name\": \"pCon\",  \"update\": \"hasData ? data(''dataset'')[0][''% Solicitaron Conexión''] : 0\"},\n    {\"name\": \"maxW\",  \"value\": 370}\n  ],\n  \"marks\": [\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 300}, \"y\": {\"value\": 26}, \"align\": {\"value\": \"center\"}, \"fontSize\": {\"value\": 18}, \"fontWeight\": {\"value\": \"bold\"}, \"fill\": {\"value\": \"#e2e8f0\"}, \"text\": {\"value\": \"Embudo de Interacciones\"}}}},\n    {\"type\": \"rect\", \"encode\": {\"update\": {\"x\": {\"value\": 195}, \"y\": {\"value\": 50}, \"width\": {\"signal\": \"maxW\"}, \"height\": {\"value\": 68}, \"cornerRadius\": {\"value\": 8}, \"fill\": {\"value\": \"#3b82f6\"}, \"fillOpacity\": {\"value\": 0.9}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 188}, \"y\": {\"value\": 88}, \"align\": {\"value\": \"right\"}, \"fontSize\": {\"value\": 12}, \"fill\": {\"value\": \"#94a3b8\"}, \"text\": {\"value\": \"Base de Datos\"}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 205}, \"y\": {\"value\": 88}, \"fontSize\": {\"value\": 20}, \"fontWeight\": {\"value\": \"bold\"}, \"fill\": {\"value\": \"#ffffff\"}, \"text\": {\"signal\": \"format(vBase, '','')\"}}}},\n    {\"type\": \"rect\", \"encode\": {\"update\": {\"x\": {\"value\": 195}, \"y\": {\"value\": 150}, \"width\": {\"signal\": \"vBase > 0 ? maxW * vCont / vBase : 0\"}, \"height\": {\"value\": 68}, \"cornerRadius\": {\"value\": 8}, \"fill\": {\"value\": \"#6366f1\"}, \"fillOpacity\": {\"value\": 0.9}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 188}, \"y\": {\"value\": 188}, \"align\": {\"value\": \"right\"}, \"fontSize\": {\"value\": 12}, \"fill\": {\"value\": \"#94a3b8\"}, \"text\": {\"value\": \"Contactados\"}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 205}, \"y\": {\"value\": 188}, \"fontSize\": {\"value\": 18}, \"fontWeight\": {\"value\": \"bold\"}, \"fill\": {\"value\": \"#ffffff\"}, \"text\": {\"signal\": \"format(vCont, '','') + ''  ·  '' + format(pCont, ''.1%'')\"}}}},\n    {\"type\": \"rect\", \"encode\": {\"update\": {\"x\": {\"value\": 195}, \"y\": {\"value\": 250}, \"width\": {\"signal\": \"vBase > 0 ? maxW * vLuz / vBase : 0\"}, \"height\": {\"value\": 68}, \"cornerRadius\": {\"value\": 8}, \"fill\": {\"value\": \"#8b5cf6\"}, \"fillOpacity\": {\"value\": 0.9}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 188}, \"y\": {\"value\": 288}, \"align\": {\"value\": \"right\"}, \"fontSize\": {\"value\": 12}, \"fill\": {\"value\": \"#94a3b8\"}, \"text\": {\"value\": \"Interactuaron con Luz\"}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 205}, \"y\": {\"value\": 288}, \"fontSize\": {\"value\": 18}, \"fontWeight\": {\"value\": \"bold\"}, \"fill\": {\"value\": \"#ffffff\"}, \"text\": {\"signal\": \"format(vLuz, '','') + ''  ·  '' + format(pLuz, ''.1%'')\"}}}},\n    {\"type\": \"rect\", \"encode\": {\"update\": {\"x\": {\"value\": 195}, \"y\": {\"value\": 350}, \"width\": {\"signal\": \"vBase > 0 ? maxW * vCon / vBase : 0\"}, \"height\": {\"value\": 68}, \"cornerRadius\": {\"value\": 8}, \"fill\": {\"value\": \"#10b981\"}, \"fillOpacity\": {\"value\": 0.9}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 188}, \"y\": {\"value\": 388}, \"align\": {\"value\": \"right\"}, \"fontSize\": {\"value\": 12}, \"fill\": {\"value\": \"#94a3b8\"}, \"text\": {\"value\": \"Solicitaron Conexión\"}}}},\n    {\"type\": \"text\", \"encode\": {\"update\": {\"x\": {\"value\": 205}, \"y\": {\"value\": 388}, \"fontSize\": {\"value\": 18}, \"fontWeight\": {\"value\": \"bold\"}, \"fill\": {\"value\": \"#10b981\"}, \"text\": {\"signal\": \"format(vCon, '','') + ''  ·  '' + format(pCon, ''.1%'')\"}}}}  \n  ]\n}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"autosize\": {\"contains\": \"padding\", \"type\": \"fit\"}}'"
+                }
+              }
+            },
+            "enableTooltips": { "expr": { "Literal": { "Value": "true" } } },
+            "enableContextMenu": { "expr": { "Literal": { "Value": "true" } } },
+            "enableHighlight": { "expr": { "Literal": { "Value": "false" } } },
+            "enableSelection": { "expr": { "Literal": { "Value": "false" } } },
+            "selectionMaxDataPoints": { "expr": { "Literal": { "Value": "50D" } } },
+            "selectionMode": { "expr": { "Literal": { "Value": "'simple'" } } },
+            "version": { "expr": { "Literal": { "Value": "'6.2.0'" } } }
+          }
+        }
+      ],
+      "editor": [
+        {
+          "properties": {
+            "theme": { "expr": { "Literal": { "Value": "'dark'" } } }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": { "expr": { "Literal": { "Value": "'1.9.1.0'" } } }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

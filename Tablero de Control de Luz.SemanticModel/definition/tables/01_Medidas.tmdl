@@ -1,0 +1,95 @@
+table 01_Medidas
+	lineageTag: aaaa01a1-8d77-450d-84ba-0b6634ec199c
+
+	measure 'Base de Datos' = COUNT(input_majo_puro[ID_KEY_MAJO])
+		formatString: 0
+		lineageTag: 7acfe8bd-0ac3-424f-a3d7-94729e8364ee
+
+	measure Contactados = COUNT(output[ID_KEY_OUT])
+		formatString: 0
+		lineageTag: 44c2a1f5-0702-486b-a5df-5d4761ee3c29
+
+	measure 'Cortaron Comunicación' =
+			
+			CALCULATE(
+			    COUNT(output[Interactores]),
+			    FILTER(output, output[Interactores] = "No")
+			    )
+		formatString: 0
+		lineageTag: 9211e164-cf91-4a86-b97f-9ffe850e90dc
+
+	measure 'Interactuaron con Luz' =
+			
+			CALCULATE(
+			    COUNT(output[Interactores]),
+			    FILTER(output, output[Interactores] = "Sí")
+			    )
+		formatString: 0
+		lineageTag: 8d0b0671-b26b-44a9-b843-53f29be16314
+
+	measure 'Solicitaron Conexión' =
+			
+			CALCULATE(
+			    COUNT(output[Confirmo Solucion]),
+			    FILTER(output, output[Interactores] = "Sí"),
+			    FILTER(output, output[Confirmo Solucion] = "Sí")
+			    )
+		formatString: 0
+		lineageTag: a854a3ad-8269-4c76-ae14-6eadb4ded2ce
+
+	measure 'Avisarán al Normalizar' =
+			
+			CALCULATE(
+			    COUNT(output[Confirmo Solucion]),
+			    FILTER(output, output[Interactores] = "Sí"),
+			    FILTER(output, output[Confirmo Solucion] = "No")
+			    )
+		formatString: 0
+		lineageTag: 0e01eaeb-648b-4b26-9534-76afdf5f9420
+
+	measure '% Avisarán al Normalizar' = [Avisarán al Normalizar] / [Base de Datos]
+		lineageTag: 6a0b7201-07a4-495e-a039-3fdc69e2e960
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Contactados' = [Contactados] / [Base de Datos]
+		lineageTag: b5d44373-8ee4-4787-8176-6226c0205200
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Interactuaron con Luz' = [Interactuaron con Luz] / [Base de Datos]
+		lineageTag: 33aaa5fd-49ea-4eb8-bdd2-0ecbea38f274
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Cortaron Comunicación' = [Cortaron Comunicación] / [Base de Datos]
+		lineageTag: 5996edb8-f3d6-4717-91f4-66e6cbe1289c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Solicitaron Conexión' = [Solicitaron Conexión]/[Base de Datos]
+		lineageTag: 70180eb9-b697-4ada-b51f-728e92930843
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Dummy
+		lineageTag: 40d71262-83ef-4e63-a3f3-e261057cbe42
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Dummy]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 01_Medidas = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Dummy", STRING,
+				    {
+				        {""}
+				    }
+				)
+
+	annotation PBI_Id = c8993b6d658e45698f016e20849e0005
+

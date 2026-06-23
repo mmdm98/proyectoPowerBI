@@ -1,0 +1,269 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "c57137d02145c763814e",
+  "position": {
+    "x": 58.75,
+    "y": 687.5,
+    "z": 1,
+    "height": 275,
+    "width": 812.5,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Base de Datos"
+                }
+              },
+              "queryRef": "01_Medidas.Base de Datos",
+              "nativeQueryRef": "Base de Datos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Interactuaron con Luz"
+                }
+              },
+              "queryRef": "01_Medidas.Interactuaron con Luz",
+              "nativeQueryRef": "Interactuaron con Luz"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Solicitaron Conexión"
+                }
+              },
+              "queryRef": "01_Medidas.Solicitaron Conexión",
+              "nativeQueryRef": "Solicitaron Conexión"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Contactados"
+                }
+              },
+              "queryRef": "01_Medidas.Contactados",
+              "nativeQueryRef": "Contactados"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "01_Medidas"
+                  }
+                },
+                "Property": "Base de Datos"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega/v5.json\",\n\n  \"width\": 800,\n  \"height\": 260,\n  \"padding\": 10,\n\n  \"data\": [\n    {\n      \"name\": \"dataset\"\n    },\n    {\n      \"name\": \"stages\",\n      \"source\": \"dataset\",\n      \"transform\": [\n        {\n          \"type\": \"fold\",\n          \"fields\": [\n            \"Base de Datos\",\n            \"Contactados\",\n            \"Interactuaron con Luz\",\n            \"Solicitaron Conexión\"\n          ],\n          \"as\": [\"Etapa\", \"Valor\"]\n        },\n        {\n          \"type\": \"formula\",\n          \"expr\": \"datum.Etapa == ''Base de Datos'' ? 0 : datum.Etapa == ''Contactados'' ? 1 : datum.Etapa == ''Interactuaron con Luz'' ? 2 : 3\",\n          \"as\": \"Orden\"\n        },\n        {\n          \"type\": \"formula\",\n          \"expr\": \"datum.Etapa == ''Base de Datos'' ? ''#071126'' : datum.Etapa == ''Contactados'' ? ''#1B2942'' : datum.Etapa == ''Interactuaron con Luz'' ? ''#1FA844'' : ''#1B9D96''\",\n          \"as\": \"Color\"\n        },\n        {\n          \"type\": \"formula\",\n          \"expr\": \"datum.Etapa == ''Base de Datos'' ? 520 : datum.Etapa == ''Contactados'' ? 440 : datum.Etapa == ''Interactuaron con Luz'' ? 360 : 300\",\n          \"as\": \"Ancho\"\n        }\n      ]\n    }\n  ],\n\n  \"scales\": [\n    {\n      \"name\": \"y\",\n      \"type\": \"band\",\n      \"domain\": [0, 1, 2, 3],\n      \"range\": [0, 230],\n      \"padding\": 0.18\n    }\n  ],\n\n  \"marks\": [\n    {\n      \"type\": \"text\",\n      \"from\": { \"data\": \"stages\" },\n      \"encode\": {\n        \"update\": {\n          \"x\": { \"value\": 120 },\n          \"y\": {\n            \"signal\": \"scale(''y'', datum.Orden) + bandwidth(''y'')/2\"\n          },\n          \"text\": { \"field\": \"Etapa\" },\n          \"align\": { \"value\": \"right\" },\n          \"baseline\": { \"value\": \"middle\" },\n          \"fontSize\": { \"value\": 18 },\n          \"fill\": { \"value\": \"#111111\" }\n        }\n      }\n    },\n\n    {\n      \"type\": \"rect\",\n      \"from\": { \"data\": \"stages\" },\n      \"encode\": {\n        \"update\": {\n          \"x\": {\n            \"signal\": \"180 + (520 - datum.Ancho)/2 + 4\"\n          },\n          \"y\": {\n            \"signal\": \"scale(''y'', datum.Orden) + 4\"\n          },\n          \"width\": {\n            \"field\": \"Ancho\"\n          },\n          \"height\": {\n            \"signal\": \"bandwidth(''y'')\"\n          },\n          \"cornerRadius\": {\n            \"value\": 4\n          },\n          \"fill\": {\n            \"value\": \"#00000022\"\n          }\n        }\n      }\n    },\n\n    {\n      \"type\": \"rect\",\n      \"from\": { \"data\": \"stages\" },\n      \"encode\": {\n        \"update\": {\n          \"x\": {\n            \"signal\": \"180 + (520 - datum.Ancho)/2\"\n          },\n          \"y\": {\n            \"signal\": \"scale(''y'', datum.Orden)\"\n          },\n          \"width\": {\n            \"field\": \"Ancho\"\n          },\n          \"height\": {\n            \"signal\": \"bandwidth(''y'')\"\n          },\n          \"cornerRadius\": {\n            \"value\": 4\n          },\n          \"fill\": {\n            \"field\": \"Color\"\n          }\n        }\n      }\n    },\n\n    {\n      \"type\": \"text\",\n      \"from\": { \"data\": \"stages\" },\n      \"encode\": {\n        \"update\": {\n          \"x\": {\n            \"value\": 440\n          },\n          \"y\": {\n            \"signal\": \"scale(''y'', datum.Orden) + bandwidth(''y'')/2\"\n          },\n          \"text\": {\n            \"signal\": \"format(datum.Valor, '','')\"\n          },\n          \"align\": {\n            \"value\": \"center\"\n          },\n          \"baseline\": {\n            \"value\": \"middle\"\n          },\n          \"fontSize\": {\n            \"value\": 20\n          },\n          \"fontWeight\": {\n            \"value\": \"bold\"\n          },\n          \"fill\": {\n            \"value\": \"white\"\n          }\n        }\n      }\n    }\n  ]\n}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"autosize\": {\n    \"contains\": \"padding\",\n    \"type\": \"fit\"\n  },\n  \"view\": {\n    \"stroke\": \"transparent\"\n  },\n  \"font\": \"Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif\",\n  \"arc\": {},\n  \"area\": {\n    \"line\": true,\n    \"opacity\": 0.6\n  },\n  \"bar\": {},\n  \"line\": {\n    \"strokeWidth\": 3,\n    \"strokeCap\": \"round\",\n    \"strokeJoin\": \"round\"\n  },\n  \"point\": {\n    \"filled\": true,\n    \"size\": 75\n  },\n  \"rect\": {},\n  \"text\": {\n    \"font\": \"Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif\",\n    \"fontSize\": 12,\n    \"fill\": \"#605E5C\"\n  },\n  \"axis\": {\n    \"ticks\": false,\n    \"grid\": false,\n    \"domain\": false,\n    \"labelColor\": \"#605E5C\",\n    \"labelFontSize\": 12,\n    \"titleFont\": \"din, wf_standard-font, helvetica, arial, sans-serif\",\n    \"titleColor\": \"#252423\",\n    \"titleFontSize\": 16,\n    \"titleFontWeight\": \"normal\"\n  },\n  \"axisQuantitative\": {\n    \"tickCount\": 3,\n    \"grid\": true,\n    \"gridColor\": \"#C8C6C4\",\n    \"gridDash\": [\n      1,\n      5\n    ],\n    \"labelFlush\": false\n  },\n  \"axisX\": {\n    \"labelPadding\": 5\n  },\n  \"axisY\": {\n    \"labelPadding\": 10\n  },\n  \"header\": {\n    \"titleFont\": \"din, wf_standard-font, helvetica, arial, sans-serif\",\n    \"titleFontSize\": 16,\n    \"titleColor\": \"#252423\",\n    \"labelFont\": \"Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif\",\n    \"labelFontSize\": 13.333333333333332,\n    \"labelColor\": \"#605E5C\"\n  },\n  \"legend\": {\n    \"titleFont\": \"Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif\",\n    \"titleFontWeight\": \"bold\",\n    \"titleColor\": \"#605E5C\",\n    \"labelFont\": \"Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif\",\n    \"labelFontSize\": 13.333333333333332,\n    \"labelColor\": \"#605E5C\",\n    \"symbolType\": \"circle\",\n    \"symbolSize\": 75\n  },\n  \"path\": {},\n  \"shape\": {},\n  \"symbol\": {\n    \"strokeWidth\": 1.5,\n    \"size\": 50\n  }\n}'"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableHighlight": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "selectionMaxDataPoints": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            },
+            "selectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'simple'"
+                }
+              }
+            },
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.2.0'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stateManagement": [
+        {
+          "properties": {
+            "viewportHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "265D"
+                }
+              }
+            },
+            "viewportWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "802.5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'1.9.1.0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a411ddb06781a04c3020",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Base de Datos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "298598306454788c8130",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Interactuaron con Luz"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "befa812706540550554d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Solicitaron Conexión"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9b40b1b318387705ee89",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Contactados"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

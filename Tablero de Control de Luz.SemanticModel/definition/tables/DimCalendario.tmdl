@@ -1,0 +1,145 @@
+table DimCalendario
+	lineageTag: 04f5c5c4-63b6-43ae-b256-5788d9b2eacb
+
+	column Date
+		formatString: General Date
+		lineageTag: 6da234c8-eeb7-4d68-a364-482e255ed625
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variación
+			isDefault
+			relationship: 5c6a5a56-ec39-41ee-8fb5-333bb33f8de7
+			defaultHierarchy: LocalDateTable_fd1aae3c-8444-4ce6-9db6-4c556a583070.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		formatString: 0
+		lineageTag: 9a42f309-d234-4b39-a556-3a48f744e9d2
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNro
+		formatString: 0
+		lineageTag: e88a0479-4be4-4501-9cb0-b63c09fd3072
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MesNro]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		lineageTag: 5535f2d1-32b7-419a-84c5-7447f1158076
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+		sortByColumn: MesNro
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesCorto
+		lineageTag: a20b5c84-86a5-48f6-8c8d-5e191910e1a2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MesCorto]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		lineageTag: 77daa108-f1d9-4fc2-844f-a67c8adaf714
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		formatString: 0
+		lineageTag: 48381b51-2942-4bba-ab0c-e23ee416cf13
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Dia]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaSemanaNro
+		formatString: 0
+		lineageTag: d5fae3b1-e182-4299-b0ca-7dc8c23ca08d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [DiaSemanaNro]
+
+		annotation SummarizationSetBy = Automatic
+
+	column DiaSemana
+		lineageTag: d3d753bf-5786-45bc-8d6b-34194c0e9f58
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [DiaSemana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column SemanaAño
+		formatString: 0
+		lineageTag: a91a7eab-9c76-4ffa-941d-8f0747fdcd96
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [SemanaAño]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AñoMes
+		lineageTag: f4ceb62c-f24a-47b2-8dc2-3429b410275b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [AñoMes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column AñoMesTexto
+		lineageTag: 64bdd959-24ea-4b7b-9e7d-d763120ba33f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [AñoMesTexto]
+
+		annotation SummarizationSetBy = Automatic
+
+	column EsFinDeSemana
+		lineageTag: d460001d-2f01-41a3-80a2-0f315c5e04e0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [EsFinDeSemana]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCalendario = calculated
+		mode: import
+		source =
+				
+				ADDCOLUMNS(
+				    CALENDAR(
+				        DATE(2026,1,1),
+				        DATE(2026,12,31)
+				    ),
+				    "Año", YEAR([Date]),
+				    "MesNro", MONTH([Date]),
+				    "Mes", FORMAT([Date], "MMMM"),
+				    "MesCorto", FORMAT([Date], "MMM"),
+				    "Trimestre", "T" & QUARTER([Date]),
+				    "Dia", DAY([Date]),
+				    "DiaSemanaNro", WEEKDAY([Date], 2),
+				    "DiaSemana", FORMAT([Date], "dddd"),
+				    "SemanaAño", WEEKNUM([Date], 2),
+				    "AñoMes", FORMAT([Date], "YYYY-MM"),
+				    "AñoMesTexto", FORMAT([Date], "YYYY MMM"),
+				    "EsFinDeSemana",
+				        IF(WEEKDAY([Date], 2) >= 6, "Sí", "No")
+				)
+
+	annotation PBI_Id = 12198ced98c74e978bb5609cf968d8d2
+

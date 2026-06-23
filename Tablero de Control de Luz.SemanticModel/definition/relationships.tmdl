@@ -1,0 +1,103 @@
+relationship 4373db5f-f14e-4a3b-9117-cb8652edeb6b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: input_raw.FECHA_EJECUCION
+	toColumn: LocalDateTable_6ea5dfe8-f0df-47a0-9401-48fc896c3496.Date
+
+relationship f2ab559b-c4c4-4889-b6f6-399222663e1e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: input_raw.ORD_FECHA_GENERACION
+	toColumn: LocalDateTable_2600422b-67d8-4963-80d1-8b6cf69f4792.Date
+
+relationship 1ae03bf3-ad59-4957-9935-70cbc77dbb64
+	joinOnDateBehavior: datePartOnly
+	fromColumn: output.'Fecha y Hora'
+	toColumn: LocalDateTable_2691240f-7755-4d46-8938-9f72936e828e.Date
+
+relationship dc87c51a-4662-49b1-a532-96114683451e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: main.FECHA_EJECUCION
+	toColumn: LocalDateTable_6606273b-ba70-4e21-91f6-e9107fc7a127.Date
+
+relationship 95c74dbd-afec-4000-86a8-cd904c0effb5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: main.ORD_FECHA_GENERACION
+	toColumn: LocalDateTable_3c2866f9-53b4-4fda-8894-a42c7df07f7c.Date
+
+relationship 75e400b8-0427-4ddc-9ea8-81592d23bf64
+	joinOnDateBehavior: datePartOnly
+	fromColumn: main.'input_majo.Fecha Carga'
+	toColumn: LocalDateTable_962863b9-8fdc-4f8c-bf6d-4fbf2ded860a.Date
+
+relationship b595ca99-ff6b-482a-927c-aeadd34bd222
+	joinOnDateBehavior: datePartOnly
+	fromColumn: main.'input_majo.output.Fecha y Hora'
+	toColumn: LocalDateTable_e1fa30a7-4bcb-47ec-babd-5c51d7961d6d.Date
+
+relationship abd30c0e-49c4-485d-b289-968e5979f599
+	joinOnDateBehavior: datePartOnly
+	fromColumn: output.'Fecha Carga'
+	toColumn: LocalDateTable_e256f6bc-d0de-4e1b-9936-86828b5b9e75.Date
+
+relationship 4c50fbea-d9a1-4782-abfa-13fdbaa7bbea
+	joinOnDateBehavior: datePartOnly
+	fromColumn: input_majo.'Fecha Carga'
+	toColumn: LocalDateTable_0014f461-9d9c-4dfa-b387-feb094cb5d2a.Date
+
+relationship bac83bc5-5357-441e-82bd-484f8606ac92
+	joinOnDateBehavior: datePartOnly
+	fromColumn: input_majo.'output.Fecha y Hora'
+	toColumn: LocalDateTable_da3d2acd-b58a-4e57-85a2-7722836a86a7.Date
+
+relationship 5c6a5a56-ec39-41ee-8fb5-333bb33f8de7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: DimCalendario.Date
+	toColumn: LocalDateTable_fd1aae3c-8444-4ce6-9db6-4c556a583070.Date
+
+relationship a68ac24b-e6ff-49e6-8624-af43ae8445a6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'security copy of main'.FECHA_EJECUCION
+	toColumn: LocalDateTable_280bb4d1-e057-4e47-8bfd-e5bae790e313.Date
+
+relationship bad552d2-aadf-430e-862c-ae5fc11a46e8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'security copy of main'.ORD_FECHA_GENERACION
+	toColumn: LocalDateTable_86b11c63-98fe-4c24-9a32-60f2e509cbf6.Date
+
+relationship af688d5b-f568-4142-b2ab-e123d78d3d81
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'security copy of main'.'Fecha Carga'
+	toColumn: LocalDateTable_30f70765-668e-4747-a5f9-36aa4c6764f1.Date
+
+relationship 5ce24321-a34e-42a9-ab4c-fb51e8871c99
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'security copy of main'.'input_majo.Fecha Carga'
+	toColumn: LocalDateTable_fe631cba-95f5-4e65-8d39-eb8358b416b4.Date
+
+relationship 16a47dad-8589-4733-86fb-ec6a8cae59bb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'security copy of main'.'input_majo.output.Fecha y Hora'
+	toColumn: LocalDateTable_975c0190-8187-4e66-b021-bf297a7fffa8.Date
+
+relationship c99c08d6-7f8d-10d5-9941-d69b7ff95f55
+	fromColumn: main.'Fecha Carga'
+	toColumn: DimCalendario.Date
+
+relationship 1248f4a1-6289-435c-9870-c635b0a468a4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: input_majo_puro.'Fecha Carga'
+	toColumn: LocalDateTable_826001b5-b935-4668-a040-85714a73905e.Date
+
+relationship 4956ba3c-28ba-9569-7343-44394f1ef9f0
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: input_raw.ID_KEY_RAW
+	toColumn: input_majo_puro.ID_KEY_MAJO
+
+relationship bac9d88b-f379-6ed4-f770-752f88250685
+	fromColumn: output.ID_KEY_OUT
+	toColumn: input_majo_puro.ID_KEY_MAJO
+
+relationship 7a8cacc8-e000-02ee-9cdd-4d8a2ae803c7
+	fromColumn: input_raw.'Fecha Carga'
+	toColumn: DimCalendario.Date
+

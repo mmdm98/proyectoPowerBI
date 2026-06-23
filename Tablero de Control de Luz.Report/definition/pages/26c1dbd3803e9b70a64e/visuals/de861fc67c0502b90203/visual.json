@@ -1,0 +1,485 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "de861fc67c0502b90203",
+  "position": {
+    "x": 0,
+    "y": 164.17910447761193,
+    "z": 0,
+    "height": 504.9751243781094,
+    "width": 930.34825870646762,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "query": {
+      "queryState": {
+        "dataset": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Avisarán al Normalizar"
+                }
+              },
+              "queryRef": "01_Medidas.Avisarán al Normalizar",
+              "nativeQueryRef": "Avisarán al Normalizar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Base de Datos"
+                }
+              },
+              "queryRef": "01_Medidas.Base de Datos",
+              "nativeQueryRef": "Base de Datos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Cortaron Comunicación"
+                }
+              },
+              "queryRef": "01_Medidas.Cortaron Comunicación",
+              "nativeQueryRef": "Cortaron Comunicación"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Contactados"
+                }
+              },
+              "queryRef": "01_Medidas.Contactados",
+              "nativeQueryRef": "Contactados"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Interactuaron con Luz"
+                }
+              },
+              "queryRef": "01_Medidas.Interactuaron con Luz",
+              "nativeQueryRef": "Interactuaron con Luz"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Solicitaron Conexión"
+                }
+              },
+              "queryRef": "01_Medidas.Solicitaron Conexión",
+              "nativeQueryRef": "Solicitaron Conexión"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Avisarán al Normalizar"
+                }
+              },
+              "queryRef": "01_Medidas.% Avisarán al Normalizar",
+              "nativeQueryRef": "% Avisarán al Normalizar"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Contactados"
+                }
+              },
+              "queryRef": "01_Medidas.% Contactados",
+              "nativeQueryRef": "% Contactados"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Cortaron Comunicación"
+                }
+              },
+              "queryRef": "01_Medidas.% Cortaron Comunicación",
+              "nativeQueryRef": "% Cortaron Comunicación"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Interactuaron con Luz"
+                }
+              },
+              "queryRef": "01_Medidas.% Interactuaron con Luz",
+              "nativeQueryRef": "% Interactuaron con Luz"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Solicitaron Conexión"
+                }
+              },
+              "queryRef": "01_Medidas.% Solicitaron Conexión",
+              "nativeQueryRef": "% Solicitaron Conexión"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "01_Medidas"
+                  }
+                },
+                "Property": "Avisarán al Normalizar"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "vega": [
+        {
+          "properties": {
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
+            "jsonSpec": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"$schema\": \"https://vega.github.io/schema/vega/v5.json\",\n  \"width\": 900,\n  \"height\": 460,\n  \"autosize\": \"none\",\n  \"padding\": 10,\n\n  \"data\": [\n    {\n      \"name\": \"dataset\"\n    },\n    {\n      \"name\": \"cards\",\n      \"values\": [\n        {\n          \"titulo\": \"Base de Datos\",\n          \"x\": 20, \"y\": 60,\n          \"bg\": \"#ffffff\", \"border\": \"#e2e8f0\", \"color\": \"#0f172a\"\n        },\n        {\n          \"titulo\": \"Contactados\",\n          \"x\": 310, \"y\": 60,\n          \"bg\": \"#ffffff\", \"border\": \"#e2e8f0\", \"color\": \"#1e293b\"\n        },\n        {\n          \"titulo\": \"Cortaron Comunicación\",\n          \"x\": 600, \"y\": 60,\n          \"bg\": \"#fff1f2\", \"border\": \"#fecdd3\", \"color\": \"#e11d48\"\n        },\n        {\n          \"titulo\": \"Interactuaron con Luz\",\n          \"x\": 20, \"y\": 230,\n          \"bg\": \"#f0fdf4\", \"border\": \"#bbf7d0\", \"color\": \"#16a34a\"\n        },\n        {\n          \"titulo\": \"Solicitaron Conexión\",\n          \"x\": 310, \"y\": 230,\n          \"bg\": \"#ffffff\", \"border\": \"#0d9488\", \"color\": \"#0f172a\"\n        },\n        {\n          \"titulo\": \"Avisarán al Normalizar\",\n          \"x\": 600, \"y\": 230,\n          \"bg\": \"#ffffff\", \"border\": \"#e2e8f0\", \"color\": \"#f59e0b\"\n        }\n      ]\n    }\n  ],\n\n  \"signals\": [\n    {\n      \"name\": \"hasData\",\n      \"update\": \"length(data(''dataset'')) > 0\"\n    },\n    { \"name\": \"v_Base\", \"update\": \"hasData ? data(''dataset'')[0][''Base de Datos''] : 0\" },\n    { \"name\": \"v_Contactados\", \"update\": \"hasData ? data(''dataset'')[0][''Contactados''] : 0\" },\n    { \"name\": \"v_Cortaron\", \"update\": \"hasData ? data(''dataset'')[0][''Cortaron Comunicación''] : 0\" },\n    { \"name\": \"v_Luz\", \"update\": \"hasData ? data(''dataset'')[0][''Interactuaron con Luz''] : 0\" },\n    { \"name\": \"v_Conexion\", \"update\": \"hasData ? data(''dataset'')[0][''Solicitaron Conexión''] : 0\" },\n    { \"name\": \"v_Normalizar\", \"update\": \"hasData ? data(''dataset'')[0][''Avisarán al Normalizar''] : 0\" },\n    { \"name\": \"p_Contactados\", \"update\": \"hasData ? data(''dataset'')[0][''% Contactados''] : 0\" },\n    { \"name\": \"p_Cortaron\", \"update\": \"hasData ? data(''dataset'')[0][''% Cortaron Comunicación''] : 0\" },\n    { \"name\": \"p_Luz\", \"update\": \"hasData ? data(''dataset'')[0][''% Interactuaron con Luz''] : 0\" },\n    { \"name\": \"p_Conexion\", \"update\": \"hasData ? data(''dataset'')[0][''% Solicitaron Conexión''] : 0\" },\n    { \"name\": \"p_Normalizar\", \"update\": \"hasData ? data(''dataset'')[0][''% Avisarán al Normalizar''] : 0\" }\n  ],\n\n  \"marks\": [\n    {\n      \"type\": \"text\",\n      \"encode\": {\n        \"update\": {\n          \"x\": { \"value\": 440 },\n          \"y\": { \"value\": 20 },\n          \"align\": { \"value\": \"center\" },\n          \"fontSize\": { \"value\": 24 },\n          \"fontWeight\": { \"value\": \"bold\" },\n          \"fill\": { \"value\": \"#1e293b\" },\n          \"text\": { \"value\": \"Resumen Ejecutivo del Comportamiento\" }\n        }\n      }\n    },\n    {\n      \"type\": \"text\",\n      \"encode\": {\n        \"update\": {\n          \"x\": { \"value\": 440 },\n          \"y\": { \"value\": 430 },\n          \"align\": { \"value\": \"center\" },\n          \"fontSize\": { \"value\": 14 },\n          \"fontStyle\": { \"value\": \"italic\" },\n          \"fill\": { \"value\": \"#64748b\" },\n          \"text\": {\n            \"signal\": \"''*Todos los porcentajes están calculados sobre el 100% de la Base de Datos Histórica ('' + format(v_Base, '','') + '' clientes).''\"\n          }\n        }\n      }\n    },\n    {\n      \"type\": \"rect\",\n      \"from\": { \"data\": \"cards\" },\n      \"encode\": {\n        \"update\": {\n          \"x\": { \"field\": \"x\" },\n          \"y\": { \"field\": \"y\" },\n          \"width\": { \"value\": 260 },\n          \"height\": { \"value\": 150 },\n          \"cornerRadius\": { \"value\": 8 },\n          \"fill\": { \"field\": \"bg\" },\n          \"stroke\": { \"field\": \"border\" },\n          \"strokeWidth\": {\n            \"signal\": \"datum.titulo == ''Solicitaron Conexión'' ? 2 : 1\"\n          }\n        }\n      }\n    },\n    {\n      \"type\": \"text\",\n      \"from\": { \"data\": \"cards\" },\n      \"encode\": {\n        \"update\": {\n          \"x\": { \"signal\": \"datum.x + 130\" },\n          \"y\": { \"signal\": \"datum.y + 55\" },\n          \"align\": { \"value\": \"center\" },\n          \"fontSize\": { \"value\": 42 },\n          \"fontWeight\": { \"value\": \"bold\" },\n          \"fill\": { \"field\": \"color\" },\n          \"text\": {\n            \"signal\": \"datum.titulo==''Base de Datos'' ? format(v_Base, '','') : datum.titulo==''Contactados'' ? format(v_Contactados, '','') : datum.titulo==''Cortaron Comunicación'' ? format(v_Cortaron, '','') : datum.titulo==''Interactuaron con Luz'' ? format(v_Luz, '','') : datum.titulo==''Solicitaron Conexión'' ? format(v_Conexion, '','') : format(v_Normalizar, '','')\"\n          }\n        }\n      }\n    },\n    {\n      \"type\": \"text\",\n      \"from\": { \"data\": \"cards\" },\n      \"encode\": {\n        \"update\": {\n          \"x\": { \"signal\": \"datum.x + 130\" },\n          \"y\": { \"signal\": \"datum.y + 98\" },\n          \"align\": { \"value\": \"center\" },\n          \"fontSize\": { \"value\": 16 },\n          \"fontWeight\": { \"value\": \"bold\" },\n          \"fill\": { \"value\": \"#475569\" },\n          \"text\": { \"field\": \"titulo\" }\n        }\n      }\n    },\n    {\n      \"type\": \"text\",\n      \"from\": { \"data\": \"cards\" },\n      \"encode\": {\n        \"update\": {\n          \"x\": { \"signal\": \"datum.x + 130\" },\n          \"y\": { \"signal\": \"datum.y + 125\" },\n          \"align\": { \"value\": \"center\" },\n          \"fontSize\": { \"value\": 13 },\n          \"fill\": { \"value\": \"#64748b\" },\n          \"text\": {\n            \"signal\": \"datum.titulo==''Base de Datos'' ? ''Universo total filtrado'' : (datum.titulo==''Contactados'' ? format(p_Contactados, ''.1%'') : datum.titulo==''Cortaron Comunicación'' ? format(p_Cortaron, ''.1%'') : datum.titulo==''Interactuaron con Luz'' ? format(p_Luz, ''.1%'') : datum.titulo==''Solicitaron Conexión'' ? format(p_Conexion, ''.1%'') : format(p_Normalizar, ''.1%'')) + '' sobre la base total''\"\n          }\n        }\n      }\n    }\n  ]\n}'"
+                }
+              }
+            },
+            "jsonConfig": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\n  \"autosize\": {\n    \"contains\": \"padding\",\n    \"type\": \"fit\"\n  }\n}'"
+                }
+              }
+            },
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableHighlight": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "selectionMaxDataPoints": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            },
+            "selectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'simple'"
+                }
+              }
+            },
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.2.0'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stateManagement": [
+        {
+          "properties": {
+            "viewportHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "494.9751243781094D"
+                }
+              }
+            },
+            "viewportWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "920.3482587064676D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "editor": [
+        {
+          "properties": {
+            "debugTableRowsPerPage": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "theme": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dark'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "developer": [
+        {
+          "properties": {
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'1.9.1.0'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2335ab56e4d1073d6d17",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Avisarán al Normalizar"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "342e5b5620e05b3b4441",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Base de Datos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4f0b9b50836a50ddce2a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Cortaron Comunicación"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "113551701c618ed07b52",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Contactados"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2150d4ebe30274a9250c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Interactuaron con Luz"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c09bdd3eaece6dc7257b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Solicitaron Conexión"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fa75fe35b20675e5b40d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Avisarán al Normalizar"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5073ef1a69d6028cae9a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Contactados"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "74fd453e0ac59033c7ea",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Cortaron Comunicación"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a472c9462030941ea00d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Interactuaron con Luz"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0d70c1f4aa446079d236",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Solicitaron Conexión"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

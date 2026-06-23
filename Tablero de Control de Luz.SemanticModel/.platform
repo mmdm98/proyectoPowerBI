@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Tablero de Control de Luz"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c2055819-e9fb-4661-9f93-14418647370d"
+  }
+}

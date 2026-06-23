@@ -1,0 +1,135 @@
+expression Parámetro1 = #"Archivo de ejemplo" meta [IsParameterQuery=true, BinaryIdentifier=#"Archivo de ejemplo", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 23dd6064-3faa-4a85-b15a-b302a66c79b5
+	queryGroup: 'Transformar archivo de input_raw\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+	annotation PBI_NavigationStepName = Navegación
+
+expression 'Transformar archivo de ejemplo' =
+		let
+		    Origen = Excel.Workbook(Parámetro1, null, true),
+		    Sheet1_Sheet = Origen{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Encabezados promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Encabezados promovidos"
+	lineageTag: e1121240-89c0-4d43-88c6-4cb6b7ad5eb4
+	queryGroup: 'Transformar archivo de input_raw'
+
+	annotation PBI_ResultType = Table
+
+expression 'Archivo de ejemplo' =
+		let
+		    Origen = Folder.Files("D:\Usuarios\mdelgadillo\Documents\luz_pbi\input_raw"),
+		    Navegación1 = Origen{0}[Content]
+		in
+		    Navegación1
+	lineageTag: b1e9b29a-313e-4f8d-8e15-300bd3c723e0
+	queryGroup: 'Transformar archivo de input_raw\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformar archivo' =
+		let
+		    Origen = (Parámetro1 as binary) => let
+		    Origen = Excel.Workbook(Parámetro1, null, true),
+		    Sheet1_Sheet = Origen{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Encabezados promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Encabezados promovidos"
+		in
+		    Origen
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformar archivo de ejemplo""}" ]
+	lineageTag: 8bd48d12-45ee-487a-a197-007678e45b13
+	queryGroup: 'Transformar archivo de input_raw\Consultas auxiliares'
+
+	annotation PBI_ResultType = Function
+
+expression Parámetro2 = #"Archivo de ejemplo (2)" meta [IsParameterQuery=true, BinaryIdentifier=#"Archivo de ejemplo (2)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: b8c2b84b-61aa-44a6-bd54-314a3d30d93a
+	queryGroup: 'Transformar archivo de input_majo\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression Parámetro3 = #"Archivo de ejemplo (3)" meta [IsParameterQuery=true, BinaryIdentifier=#"Archivo de ejemplo (3)", Type="Binary", IsParameterQueryRequired=true]
+	lineageTag: 18769f57-2143-41db-9720-233244b1e823
+	queryGroup: 'Transformar archivo de output\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformar archivo de ejemplo (2)' =
+		let
+		    Origen = Excel.Workbook(Parámetro2, null, true),
+		    Tabla1_Table = Origen{[Item="Tabla1",Kind="Table"]}[Data]
+		in
+		    Tabla1_Table
+	lineageTag: cb5b6945-d7f3-4035-a043-b57ac605f788
+	queryGroup: 'Transformar archivo de input_majo'
+
+	annotation PBI_ResultType = Table
+
+expression 'Archivo de ejemplo (2)' =
+		let
+		    Origen = Folder.Files("D:\Usuarios\mdelgadillo\Documents\luz_pbi\input_majo"),
+		    Navegación1 = Origen{0}[Content]
+		in
+		    Navegación1
+	lineageTag: f949f181-af82-4b03-b62d-179830b04540
+	queryGroup: 'Transformar archivo de input_majo\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformar archivo (2)' =
+		let
+		    Origen = (Parámetro2 as binary) => let
+		    Origen = Excel.Workbook(Parámetro2, null, true),
+		    Tabla1_Table = Origen{[Item="Tabla1",Kind="Table"]}[Data]
+		in
+		    Tabla1_Table
+		in
+		    Origen
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformar archivo de ejemplo (2)""}" ]
+	lineageTag: d89001b0-0bad-4845-9063-545d1bf0bff8
+	queryGroup: 'Transformar archivo de input_majo\Consultas auxiliares'
+
+	annotation PBI_ResultType = Function
+
+expression 'Transformar archivo de ejemplo (3)' =
+		let
+		    Origen = Excel.Workbook(Parámetro3, null, true),
+		    Sheet1_Sheet = Origen{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Encabezados promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Encabezados promovidos"
+	lineageTag: 1ffd3c70-6c5b-495a-a082-92e75676a9ee
+	queryGroup: 'Transformar archivo de output'
+
+	annotation PBI_ResultType = Table
+
+expression 'Archivo de ejemplo (3)' =
+		let
+		    Origen = Folder.Files("D:\Usuarios\mdelgadillo\Documents\luz_pbi\output"),
+		    Navegación1 = Origen{0}[Content]
+		in
+		    Navegación1
+	lineageTag: 9ee32c96-311d-4c8f-8011-96d30acc41ec
+	queryGroup: 'Transformar archivo de output\Consultas auxiliares'
+
+	annotation PBI_ResultType = Binary
+
+expression 'Transformar archivo (3)' =
+		let
+		    Origen = (Parámetro3 as binary) => let
+		    Origen = Excel.Workbook(Parámetro3, null, true),
+		    Sheet1_Sheet = Origen{[Item="Sheet1",Kind="Sheet"]}[Data],
+		    #"Encabezados promovidos" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true])
+		in
+		    #"Encabezados promovidos"
+		in
+		    Origen
+	mAttributes: [ FunctionQueryBinding = "{""exemplarFormulaName"":""Transformar archivo de ejemplo (3)""}" ]
+	lineageTag: bd211fcb-21c9-4c50-a130-cd195e955150
+	queryGroup: 'Transformar archivo de output\Consultas auxiliares'
+
+	annotation PBI_ResultType = Function
+

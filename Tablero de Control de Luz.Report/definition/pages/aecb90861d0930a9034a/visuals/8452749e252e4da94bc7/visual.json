@@ -1,0 +1,187 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "8452749e252e4da94bc7",
+  "position": {
+    "x": 0,
+    "y": 157.74647887323945,
+    "z": 3004,
+    "height": 281.69014084507046,
+    "width": 469.85915492957747,
+    "tabOrder": 3004
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "SUMINISTRO"
+                }
+              },
+              "queryRef": "Sum(main.SUMINISTRO)",
+              "nativeQueryRef": "SUMINISTRO"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "main"
+                        }
+                      },
+                      "Property": "SUMINISTRO"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Sum(main.SUMINISTRO)1",
+              "nativeQueryRef": "RS",
+              "displayName": "RS"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "DIRECCION"
+                }
+              },
+              "queryRef": "main.DIRECCION",
+              "nativeQueryRef": "DIRECCION"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "input_majo.output.Contactados"
+                }
+              },
+              "queryRef": "main.input_majo.output.Contactados",
+              "nativeQueryRef": "Contactados",
+              "displayName": "Contactados"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "main"
+                  }
+                },
+                "Property": "SUMINISTRO"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "43.30985915492957D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(main.SUMINISTRO)1"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "72c40d13d782c25ecab6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "main"
+              }
+            },
+            "Property": "SUMINISTRO"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5bccc0549c90b6273204",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "main"
+                  }
+                },
+                "Property": "SUMINISTRO"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7793fec89764e0e02ac1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "main"
+              }
+            },
+            "Property": "DIRECCION"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4bf575c324b901b06ce2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "main"
+              }
+            },
+            "Property": "input_majo.output.Contactados"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

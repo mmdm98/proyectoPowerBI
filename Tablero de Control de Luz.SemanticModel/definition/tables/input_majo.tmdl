@@ -1,0 +1,455 @@
+table input_majo
+	isHidden
+	lineageTag: f83e8004-62e4-47c2-9fe9-877108125f82
+
+	column input_majo_name
+		dataType: string
+		isHidden
+		lineageTag: 683247eb-dfec-4d8a-87b4-18c21cabf25e
+		summarizeBy: none
+		sourceColumn: input_majo_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUMINISTRO
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3980e14c-a2fc-45eb-8982-2817990f9056
+		summarizeBy: sum
+		sourceColumn: SUMINISTRO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIRECCION
+		dataType: string
+		isHidden
+		lineageTag: e37b3907-8488-4df4-97ea-fe313f70b8a2
+		summarizeBy: none
+		sourceColumn: DIRECCION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TELEFONO
+		dataType: string
+		isHidden
+		lineageTag: a94ea1d6-bf90-49cd-845e-8bba423f3aaa
+		summarizeBy: none
+		sourceColumn: TELEFONO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TELEFONO_CELULAR
+		dataType: string
+		isHidden
+		lineageTag: 95c4154c-abb1-4786-b075-6a2af0d853c6
+		summarizeBy: none
+		sourceColumn: TELEFONO_CELULAR
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GASTO_MOVILIDAD
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 15d49348-1454-45a8-9421-218ecba2b306
+		summarizeBy: sum
+		sourceColumn: GASTO_MOVILIDAD
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOTIVO
+		dataType: string
+		isHidden
+		lineageTag: fd5e92eb-fa8d-4d25-9043-86f7ad992324
+		summarizeBy: none
+		sourceColumn: MOTIVO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Responsabilidad
+		dataType: string
+		isHidden
+		lineageTag: 65c399ed-792a-41da-81dc-c14b4e6d05cf
+		summarizeBy: none
+		sourceColumn: Responsabilidad
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Carga'
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 6521e9ef-6204-4a50-8be2-effef2a1b169
+		summarizeBy: none
+		sourceColumn: Fecha Carga
+
+		variation Variación
+			isDefault
+			relationship: 4c50fbea-d9a1-4782-abfa-13fdbaa7bbea
+			defaultHierarchy: LocalDateTable_0014f461-9d9c-4dfa-b387-feb094cb5d2a.'Jerarquía de fechas'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ID_KEY_MAJO
+		dataType: string
+		isHidden
+		lineageTag: 7dc1668d-fc9b-40f5-862d-0e07abb74a6e
+		summarizeBy: none
+		sourceColumn: ID_KEY_MAJO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Fecha y Hora'
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 46717963-bb53-4f5e-a0b7-7de777e8d790
+		summarizeBy: none
+		sourceColumn: output.Fecha y Hora
+
+		variation Variación
+			isDefault
+			relationship: bac83bc5-5357-441e-82bd-484f8606ac92
+			defaultHierarchy: LocalDateTable_da3d2acd-b58a-4e57-85a2-7722836a86a7.'Jerarquía de fechas'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Desde'
+		dataType: string
+		isHidden
+		lineageTag: 636481d4-62ba-45e1-b46e-2b9d5f48f062
+		summarizeBy: none
+		sourceColumn: output.Desde
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Suministro'
+		dataType: string
+		isHidden
+		lineageTag: ec3c52c5-e003-4215-b374-60292a8ff29f
+		summarizeBy: none
+		sourceColumn: output.Suministro
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Impedimento'
+		dataType: string
+		isHidden
+		lineageTag: e71512ba-3991-424c-ba32-5e6642ec2f0d
+		summarizeBy: none
+		sourceColumn: output.Impedimento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Confirmo Solucion'
+		dataType: string
+		isHidden
+		lineageTag: 27fb3618-770b-49f6-9f8d-9a5da82a5734
+		summarizeBy: none
+		sourceColumn: output.Confirmo Solucion
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Contacto Efectivo'
+		dataType: string
+		isHidden
+		lineageTag: 28e0debd-4de4-477c-85ca-d01df575394c
+		summarizeBy: none
+		sourceColumn: output.Contacto Efectivo
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Resultado Efectivamente Informado'
+		dataType: string
+		isHidden
+		lineageTag: d1b920e8-b358-4e57-b7ed-87863fbb5153
+		summarizeBy: none
+		sourceColumn: output.Resultado Efectivamente Informado
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Speech Completo '
+		dataType: string
+		isHidden
+		lineageTag: ac3c781f-58a2-42eb-972b-d252d2e875af
+		summarizeBy: none
+		sourceColumn: "output.Speech Completo "
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Objetivo Cumplido'
+		dataType: string
+		isHidden
+		lineageTag: 54c6a407-de05-4f37-892f-b2073352a2ba
+		summarizeBy: none
+		sourceColumn: output.Objetivo Cumplido
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Disponibilidad Horaria'
+		dataType: string
+		isHidden
+		lineageTag: 2fde683b-a661-4a3d-826f-2bfce1b5048d
+		summarizeBy: none
+		sourceColumn: output.Disponibilidad Horaria
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Domicilio Referencias'
+		dataType: string
+		isHidden
+		lineageTag: 18bb79b1-1637-4657-a3bc-ad7a7799d613
+		summarizeBy: none
+		sourceColumn: output.Domicilio Referencias
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Hubo Interaccion'
+		dataType: string
+		isHidden
+		lineageTag: 78ed9485-0019-4099-9ffa-7c7c3dcdba78
+		summarizeBy: none
+		sourceColumn: output.Hubo Interaccion
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Interrupcion Al Bot'
+		dataType: string
+		isHidden
+		lineageTag: 5bd1ae54-a17d-441c-a194-006ccbcfd6c2
+		summarizeBy: none
+		sourceColumn: output.Interrupcion Al Bot
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Menciona 0800'
+		dataType: string
+		isHidden
+		lineageTag: 079ef327-83a2-412d-8919-4d0daf1b0f57
+		summarizeBy: none
+		sourceColumn: output.Menciona 0800
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Motivo No Entrega'
+		dataType: string
+		isHidden
+		lineageTag: 5fe5d96e-6c8b-46b9-bee8-5ba78f14e085
+		summarizeBy: none
+		sourceColumn: output.Motivo No Entrega
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Motivo Reintento'
+		dataType: string
+		isHidden
+		lineageTag: d830977d-fd14-48e8-b3b6-85f88fae4b8b
+		summarizeBy: none
+		sourceColumn: output.Motivo Reintento
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Sentimiento Cliente'
+		dataType: string
+		isHidden
+		lineageTag: 2e9c5266-eec1-4c51-b152-696246bce86c
+		summarizeBy: none
+		sourceColumn: output.Sentimiento Cliente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Tiempo Habla Bot Seg'
+		dataType: double
+		isHidden
+		lineageTag: 385b74a4-ff7a-462f-9b30-814406086cd3
+		summarizeBy: sum
+		sourceColumn: output.Tiempo Habla Bot Seg
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'output.Tiempo Habla Cliente Seg'
+		dataType: double
+		isHidden
+		lineageTag: a753fe7a-b608-470d-8397-ad6e199d0809
+		summarizeBy: sum
+		sourceColumn: output.Tiempo Habla Cliente Seg
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'output.Duracion Total Seg'
+		dataType: double
+		isHidden
+		lineageTag: 421287f8-41ce-49f2-85f9-ead8a71fdc75
+		summarizeBy: sum
+		sourceColumn: output.Duracion Total Seg
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'output.Tipo Contacto'
+		dataType: string
+		isHidden
+		lineageTag: 3f6ae168-30d0-4d18-8e7d-e186e0451316
+		summarizeBy: none
+		sourceColumn: output.Tipo Contacto
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Tipo Interaccion'
+		dataType: string
+		isHidden
+		lineageTag: 21a2dd36-d484-42d7-89f1-399288ab5fa3
+		summarizeBy: none
+		sourceColumn: output.Tipo Interaccion
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Contactados'
+		dataType: string
+		isHidden
+		lineageTag: 91285977-9a86-4013-b983-5076d8bfa19c
+		summarizeBy: none
+		sourceColumn: output.Contactados
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'output.Interactores'
+		dataType: string
+		isHidden
+		lineageTag: 4f971ef9-d80e-4324-932d-45d61712b691
+		summarizeBy: none
+		sourceColumn: output.Interactores
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID_KEY_MJV_FyH
+		dataType: string
+		isHidden
+		lineageTag: e0201beb-5acb-4381-a1f4-2407b6f57057
+		summarizeBy: none
+		sourceColumn: ID_KEY_MJV_FyH
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition input_majo = m
+		mode: import
+		source =
+				let
+				    Origen = Folder.Files("D:\Usuarios\mdelgadillo\Documents\luz_pbi\input_majo"),
+				    #"Archivos ocultos filtrados1" = Table.SelectRows(Origen, each [Attributes]?[Hidden]? <> true),
+				    #"Invocar función personalizada1" = Table.AddColumn(#"Archivos ocultos filtrados1", "Transformar archivo (2)", each #"Transformar archivo (2)"([Content])),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Invocar función personalizada1", {"Name", "Source.Name"}),
+				    #"Otras columnas quitadas1" = Table.SelectColumns(#"Columnas con nombre cambiado1", {"Source.Name", "Transformar archivo (2)"}),
+				    #"Columna de tabla expandida1" = Table.ExpandTableColumn(#"Otras columnas quitadas1", "Transformar archivo (2)", Table.ColumnNames(#"Transformar archivo (2)"(#"Archivo de ejemplo (2)"))),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columna de tabla expandida1",{{"Source.Name", type text}, {"SUMINISTRO", Int64.Type}, {"CONTRATO", Int64.Type}, {"RAZON_SOCIAL", type text}, {"BARRIO", type text}, {"DIRECCION", type text}, {"TELEFONO", Int64.Type}, {"TELEFONO_CELULAR", Int64.Type}, {"FECHA_EJECUCION", type date}, {"COSTO_INSTALACION", Int64.Type}, {"GASTO_MOVILIDAD", Int64.Type}, {"MOTIVO", type text}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Source.Name", "input_majo_name"}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"CONTRATO", "RAZON_SOCIAL"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Columnas quitadas",{{"TELEFONO", type text}, {"TELEFONO_CELULAR", type text}}),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Tipo cambiado1",{"FECHA_EJECUCION", "COSTO_INSTALACION", "BARRIO"}),
+				    #"Filas filtradas" = Table.SelectRows(#"Columnas quitadas1", each true),
+				    Responsabilidad = Table.AddColumn(#"Filas filtradas", "Responsabilidad", each "Responsabilidad del Cliente"),
+				    #"Fecha de Carga" = Table.AddColumn(Responsabilidad, "Fecha Carga", each Date.FromText(Text.Replace(Text.Middle([input_majo_name], 12, 8), "_", "/"),[Format="dd/MM/yy"])),
+				    #"Tipo date" = Table.TransformColumnTypes(#"Fecha de Carga",{{"Fecha Carga", type date}}),
+				    ID_KEY_MAJO = Table.AddColumn(#"Tipo date", "ID_KEY_MAJO", each Text.From([SUMINISTRO]) & Date.ToText(Date.From([Fecha Carga]), "yyyyMMdd")),
+				    #"Consultas combinadas" = Table.NestedJoin(ID_KEY_MAJO, {"ID_KEY_MAJO"}, output, {"ID_KEY_OUT"}, "output", JoinKind.LeftOuter),
+				    #"Se expandió output" = Table.ExpandTableColumn(#"Consultas combinadas", "output", {"Fecha y Hora", "Desde", "Suministro", "Impedimento", "Confirmo Solucion", "Contacto Efectivo", "Resultado Efectivamente Informado", "Speech Completo ", "Objetivo Cumplido", "Disponibilidad Horaria", "Domicilio Referencias", "Hubo Interaccion", "Interrupcion Al Bot", "Menciona 0800", "Motivo No Entrega", "Motivo Reintento", "Sentimiento Cliente", "Tiempo Habla Bot Seg", "Tiempo Habla Cliente Seg", "Duracion Total Seg", "Tipo Contacto", "Tipo Interaccion", "Contactados", "Interactores", "ID_KEY_FyH"}, {"output.Fecha y Hora", "output.Desde", "output.Suministro", "output.Impedimento", "output.Confirmo Solucion", "output.Contacto Efectivo", "output.Resultado Efectivamente Informado", "output.Speech Completo ", "output.Objetivo Cumplido", "output.Disponibilidad Horaria", "output.Domicilio Referencias", "output.Hubo Interaccion", "output.Interrupcion Al Bot", "output.Menciona 0800", "output.Motivo No Entrega", "output.Motivo Reintento", "output.Sentimiento Cliente", "output.Tiempo Habla Bot Seg", "output.Tiempo Habla Cliente Seg", "output.Duracion Total Seg", "output.Tipo Contacto", "output.Tipo Interaccion", "output.Contactados", "output.Interactores", "output.ID_KEY_FyH"}),
+				    ID_KEY_MJV_FyH = Table.AddColumn(
+				    #"Se expandió output",
+				    "ID_KEY_MJV_FyH",
+				    each Text.Combine(
+				        List.RemoveNulls({
+				            Text.From([ID_KEY_MAJO]),
+				            Text.From([output.ID_KEY_FyH])
+				        })
+				    ),
+				    type text
+				),
+				    #"Columnas quitadas2" = Table.RemoveColumns(ID_KEY_MJV_FyH,{"output.ID_KEY_FyH"}),
+				    #"Valor reemplazado" = Table.ReplaceValue(#"Columnas quitadas2",null,"No Contactados",Replacer.ReplaceValue,{"output.Contactados"})
+				in
+				    #"Valor reemplazado"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

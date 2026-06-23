@@ -1,0 +1,90 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "aea4b47b38e894012181",
+  "position": {
+    "x": 294.08450704225356,
+    "y": 15.774647887323944,
+    "z": 0,
+    "height": 134.08450704225353,
+    "width": 277.18309859154931,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "input_raw"
+                        }
+                      },
+                      "Property": "ID_KEY_RAW"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "Min(input_raw.ID_KEY_RAW)",
+              "nativeQueryRef": "Base de Datos SQL",
+              "displayName": "Base de Datos SQL"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "input_raw"
+                      }
+                    },
+                    "Property": "ID_KEY_RAW"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d22840e701b30ad45330",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "input_raw"
+                  }
+                },
+                "Property": "ID_KEY_RAW"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "15e71d1f7b5754dba1cc",
+  "position": {
+    "x": 0,
+    "y": 439.43661971830988,
+    "z": 0,
+    "height": 280.56338028169017,
+    "width": 1000.5633802816902,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "decompositionTreeVisual",
+    "query": {
+      "queryState": {
+        "Analyze": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "main"
+                        }
+                      },
+                      "Property": "ID_KEY"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(main.ID_KEY)",
+              "nativeQueryRef": "SQL Database",
+              "displayName": "SQL Database"
+            }
+          ]
+        },
+        "ExplainBy": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "input_majo.Responsabilidad"
+                }
+              },
+              "queryRef": "main.input_majo.Responsabilidad",
+              "nativeQueryRef": "Injerencia",
+              "active": true,
+              "displayName": "Injerencia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "input_majo.output.Contactados"
+                }
+              },
+              "queryRef": "main.input_majo.output.Contactados",
+              "nativeQueryRef": "Llamados",
+              "active": true,
+              "displayName": "Llamados"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "input_majo.output.Interactores"
+                }
+              },
+              "queryRef": "main.input_majo.output.Interactores",
+              "nativeQueryRef": "Interactuaron",
+              "active": true,
+              "displayName": "Interactuaron"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "input_majo.output.Confirmo Solucion"
+                }
+              },
+              "queryRef": "main.input_majo.output.Confirmo Solucion",
+              "nativeQueryRef": "CX Generada",
+              "active": true,
+              "displayName": "CX Generada"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "main"
+                      }
+                    },
+                    "Property": "ID_KEY"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "ExplainBy"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "main.input_majo.Responsabilidad"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "input_majo.Responsabilidad"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "main.input_majo.output.Contactados"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "input_majo.output.Contactados"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "main.input_majo.output.Interactores"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "main"
+                    }
+                  },
+                  "Property": "input_majo.output.Interactores"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "main.input_majo.output.Confirmo Solucion"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'Responsabilidad del Cliente'"
+                  }
+                }
+              ],
+              "isToggled": true,
+              "children": [
+                {
+                  "identityValues": [
+                    {
+                      "Literal": {
+                        "Value": "'Contactados'"
+                      }
+                    }
+                  ],
+                  "isToggled": true,
+                  "children": [
+                    {
+                      "identityValues": [
+                        {
+                          "Literal": {
+                            "Value": "'Sí'"
+                          }
+                        }
+                      ],
+                      "isToggled": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "objects": {
+      "tree": [
+        {
+          "properties": {
+            "effectiveBarsPerLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "insights": [
+        {
+          "properties": {
+            "isAINode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "main"
+                          }
+                        },
+                        "Property": "input_majo.Responsabilidad"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Responsabilidad del Cliente'"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "main"
+                          }
+                        },
+                        "Property": "input_majo.output.Interactores"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'No'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "74158198c8d67b20b00b",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "main"
+                  }
+                },
+                "Property": "ID_KEY"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "998d7c361116913d4e8c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "main"
+              }
+            },
+            "Property": "input_majo.Responsabilidad"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f758a00f47078926e2b8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "main"
+              }
+            },
+            "Property": "input_majo.output.Contactados"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b15e2cd750b846c50b4e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "main"
+              }
+            },
+            "Property": "input_majo.output.Interactores"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c458fa1f07d15ee037b0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "main"
+              }
+            },
+            "Property": "input_majo.output.Confirmo Solucion"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+table input_majo_puro
+	lineageTag: 53b517db-566e-4b78-acdd-53ab32425c04
+
+	column input_majo_name
+		dataType: string
+		lineageTag: 03f4333d-08ef-49d1-a707-2e16e06f6bd3
+		summarizeBy: none
+		sourceColumn: input_majo_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUMINISTRO
+		dataType: int64
+		formatString: 0
+		lineageTag: 66584f1e-be8d-4da5-821e-d4754a6426c6
+		summarizeBy: sum
+		sourceColumn: SUMINISTRO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIRECCION
+		dataType: string
+		lineageTag: ec26ad49-02a9-4b9d-8e6c-72e515ffd121
+		summarizeBy: none
+		sourceColumn: DIRECCION
+
+		annotation SummarizationSetBy = Automatic
+
+	column TELEFONO
+		dataType: string
+		lineageTag: e81dc4bf-d172-4f92-9cfd-64519e888454
+		summarizeBy: none
+		sourceColumn: TELEFONO
+
+		annotation SummarizationSetBy = Automatic
+
+	column TELEFONO_CELULAR
+		dataType: string
+		lineageTag: 9ad429ae-0541-496d-93f8-92fc30951135
+		summarizeBy: none
+		sourceColumn: TELEFONO_CELULAR
+
+		annotation SummarizationSetBy = Automatic
+
+	column GASTO_MOVILIDAD
+		dataType: int64
+		formatString: 0
+		lineageTag: aebaf0b2-4959-4675-b8b4-5ae8e4684bfd
+		summarizeBy: sum
+		sourceColumn: GASTO_MOVILIDAD
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOTIVO
+		dataType: string
+		lineageTag: b3534ab3-c9db-4dcc-989b-b8a68723595a
+		summarizeBy: none
+		sourceColumn: MOTIVO
+
+		annotation SummarizationSetBy = Automatic
+
+	column Responsabilidad
+		dataType: string
+		lineageTag: b17e4c78-76fa-4ced-9fec-be829a8c080a
+		summarizeBy: none
+		sourceColumn: Responsabilidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Carga'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: fc093348-7d97-488b-9e0f-75f767a4794a
+		summarizeBy: none
+		sourceColumn: Fecha Carga
+
+		variation Variación
+			isDefault
+			relationship: 1248f4a1-6289-435c-9870-c635b0a468a4
+			defaultHierarchy: LocalDateTable_826001b5-b935-4668-a040-85714a73905e.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ID_KEY_MAJO
+		dataType: string
+		lineageTag: d76907fa-136f-4a62-bbea-66cffc6731c9
+		summarizeBy: none
+		sourceColumn: ID_KEY_MAJO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition input_majo_puro = m
+		mode: import
+		source =
+				let
+				    Origen = Folder.Files("D:\Usuarios\mdelgadillo\Documents\luz_pbi\input_majo"),
+				    #"Archivos ocultos filtrados1" = Table.SelectRows(Origen, each [Attributes]?[Hidden]? <> true),
+				    #"Invocar función personalizada1" = Table.AddColumn(#"Archivos ocultos filtrados1", "Transformar archivo (2)", each #"Transformar archivo (2)"([Content])),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Invocar función personalizada1", {"Name", "Source.Name"}),
+				    #"Otras columnas quitadas1" = Table.SelectColumns(#"Columnas con nombre cambiado1", {"Source.Name", "Transformar archivo (2)"}),
+				    #"Columna de tabla expandida1" = Table.ExpandTableColumn(#"Otras columnas quitadas1", "Transformar archivo (2)", Table.ColumnNames(#"Transformar archivo (2)"(#"Archivo de ejemplo (2)"))),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columna de tabla expandida1",{{"Source.Name", type text}, {"SUMINISTRO", Int64.Type}, {"CONTRATO", Int64.Type}, {"RAZON_SOCIAL", type text}, {"BARRIO", type text}, {"DIRECCION", type text}, {"TELEFONO", Int64.Type}, {"TELEFONO_CELULAR", Int64.Type}, {"FECHA_EJECUCION", type date}, {"COSTO_INSTALACION", Int64.Type}, {"GASTO_MOVILIDAD", Int64.Type}, {"MOTIVO", type text}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado",{{"Source.Name", "input_majo_name"}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Columnas con nombre cambiado",{"CONTRATO", "RAZON_SOCIAL"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Columnas quitadas",{{"TELEFONO", type text}, {"TELEFONO_CELULAR", type text}}),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Tipo cambiado1",{"FECHA_EJECUCION", "COSTO_INSTALACION", "BARRIO"}),
+				    #"Filas filtradas" = Table.SelectRows(#"Columnas quitadas1", each true),
+				    Responsabilidad = Table.AddColumn(#"Filas filtradas", "Responsabilidad", each "Responsabilidad del Cliente"),
+				    #"Fecha de Carga" = Table.AddColumn(Responsabilidad, "Fecha Carga", each Date.FromText(Text.Replace(Text.Middle([input_majo_name], 12, 8), "_", "/"),[Format="dd/MM/yy"])),
+				    #"Tipo date" = Table.TransformColumnTypes(#"Fecha de Carga",{{"Fecha Carga", type date}}),
+				    ID_KEY_MAJO = Table.AddColumn(#"Tipo date", "ID_KEY_MAJO", each Text.From([SUMINISTRO]) & Date.ToText(Date.From([Fecha Carga]), "yyyyMMdd"))
+				in
+				    ID_KEY_MAJO
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

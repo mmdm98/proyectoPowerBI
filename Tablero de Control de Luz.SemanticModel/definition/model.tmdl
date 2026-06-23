@@ -1,0 +1,76 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-AR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Transformar archivo de input_raw'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformar archivo de input_raw\Consultas auxiliares'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformar archivo de input_majo'
+
+	annotation PBI_QueryGroupOrder = 2
+
+queryGroup 'Transformar archivo de input_majo\Consultas auxiliares'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Transformar archivo de output'
+
+	annotation PBI_QueryGroupOrder = 4
+
+queryGroup 'Transformar archivo de output\Consultas auxiliares'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup main
+
+	annotation PBI_QueryGroupOrder = 6
+
+/// solo una copia de seguridad
+queryGroup 'security copy'
+
+	annotation PBI_QueryGroupOrder = 7
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["input_raw","Parámetro1","Transformar archivo de ejemplo","Archivo de ejemplo","Transformar archivo","input_majo","Parámetro2","Transformar archivo de ejemplo (2)","Archivo de ejemplo (2)","Transformar archivo (2)","output","Parámetro3","Transformar archivo de ejemplo (3)","Archivo de ejemplo (3)","Transformar archivo (3)","main","security copy of main","input_majo_puro"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table input_raw
+ref table DateTableTemplate_0668196e-3158-4d6a-9a0a-6a60c649fc19
+ref table LocalDateTable_6ea5dfe8-f0df-47a0-9401-48fc896c3496
+ref table LocalDateTable_2600422b-67d8-4963-80d1-8b6cf69f4792
+ref table input_majo
+ref table output
+ref table LocalDateTable_2691240f-7755-4d46-8938-9f72936e828e
+ref table main
+ref table LocalDateTable_6606273b-ba70-4e21-91f6-e9107fc7a127
+ref table LocalDateTable_3c2866f9-53b4-4fda-8894-a42c7df07f7c
+ref table LocalDateTable_962863b9-8fdc-4f8c-bf6d-4fbf2ded860a
+ref table LocalDateTable_e1fa30a7-4bcb-47ec-babd-5c51d7961d6d
+ref table LocalDateTable_e256f6bc-d0de-4e1b-9936-86828b5b9e75
+ref table LocalDateTable_0014f461-9d9c-4dfa-b387-feb094cb5d2a
+ref table LocalDateTable_da3d2acd-b58a-4e57-85a2-7722836a86a7
+ref table DimCalendario
+ref table LocalDateTable_fd1aae3c-8444-4ce6-9db6-4c556a583070
+ref table 'security copy of main'
+ref table LocalDateTable_280bb4d1-e057-4e47-8bfd-e5bae790e313
+ref table LocalDateTable_86b11c63-98fe-4c24-9a32-60f2e509cbf6
+ref table LocalDateTable_30f70765-668e-4747-a5f9-36aa4c6764f1
+ref table LocalDateTable_fe631cba-95f5-4e65-8d39-eb8358b416b4
+ref table LocalDateTable_975c0190-8187-4e66-b021-bf297a7fffa8
+ref table input_majo_puro
+ref table LocalDateTable_826001b5-b935-4668-a040-85714a73905e
+ref table 01_Medidas
+
+ref cultureInfo es-ES
+

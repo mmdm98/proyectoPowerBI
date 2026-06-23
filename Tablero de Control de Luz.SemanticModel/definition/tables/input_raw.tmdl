@@ -1,0 +1,213 @@
+table input_raw
+	lineageTag: 17b3f766-c714-4cf0-a427-ea1a8a6b837e
+
+	column input_raw_name
+		dataType: string
+		lineageTag: 47224478-55c7-4cef-923f-95da7bff8caa
+		summarizeBy: none
+		sourceColumn: input_raw_name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SUMINISTRO
+		dataType: int64
+		formatString: 0
+		lineageTag: 7cda84ad-b91f-430d-8403-a4d21c0d1218
+		summarizeBy: sum
+		sourceColumn: SUMINISTRO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTRATO
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bc5dab0-cd9e-4269-a300-466058cbdd07
+		summarizeBy: sum
+		sourceColumn: CONTRATO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column RAZON_SOCIAL
+		dataType: string
+		lineageTag: 6f8767ef-8a62-4f5d-8703-dea033c01784
+		summarizeBy: none
+		sourceColumn: RAZON_SOCIAL
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column BARRIO
+		dataType: string
+		lineageTag: f016800a-c830-4370-a580-11f95592311f
+		summarizeBy: none
+		sourceColumn: BARRIO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DIRECCION
+		dataType: string
+		lineageTag: 97b8b432-1893-466d-ad1b-0a3d6d53f2de
+		summarizeBy: none
+		sourceColumn: DIRECCION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FECHA_EJECUCION
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: addb4244-427a-41c6-8cbb-1646204f8a29
+		summarizeBy: none
+		sourceColumn: FECHA_EJECUCION
+
+		variation Variación
+			isDefault
+			relationship: 4373db5f-f14e-4a3b-9117-cb8652edeb6b
+			defaultHierarchy: LocalDateTable_6ea5dfe8-f0df-47a0-9401-48fc896c3496.'Jerarquía de fechas'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column COSTO_INSTALACION
+		dataType: string
+		lineageTag: 1c75da64-e986-4edb-a83c-dc5bf9b068f4
+		summarizeBy: none
+		sourceColumn: COSTO_INSTALACION
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MOTIVO
+		dataType: string
+		lineageTag: 6d8dae7c-defb-4b3c-9e0b-d27d7c8dcb87
+		summarizeBy: none
+		sourceColumn: MOTIVO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORD_NUMERO
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f8657d0-b663-44b0-b9eb-a3fed22dc926
+		summarizeBy: sum
+		sourceColumn: ORD_NUMERO
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TARIFA
+		dataType: string
+		lineageTag: 25a4b10e-7e4c-4170-be4e-2fca5b123c5e
+		summarizeBy: none
+		sourceColumn: TARIFA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CONTEO_DIAS_DEMORA
+		dataType: string
+		lineageTag: 538e3e6b-5713-4ade-9c5e-b062ef51cccf
+		summarizeBy: none
+		sourceColumn: CONTEO_DIAS_DEMORA
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORD_FECHA_GENERACION
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 44f99922-b43c-46da-984e-e6e3e51a39b9
+		summarizeBy: none
+		sourceColumn: ORD_FECHA_GENERACION
+
+		variation Variación
+			isDefault
+			relationship: f2ab559b-c4c4-4889-b6f6-399222663e1e
+			defaultHierarchy: LocalDateTable_2600422b-67d8-4963-80d1-8b6cf69f4792.'Jerarquía de fechas'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column NUMERO_DE_TRAMITE
+		dataType: string
+		lineageTag: a155a4e9-13f1-4fec-bef2-d1fe1f5f66e3
+		summarizeBy: none
+		sourceColumn: NUMERO_DE_TRAMITE
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha Carga'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 96f6b9c7-4777-47bd-95dd-2db77c0100fb
+		summarizeBy: none
+		sourceColumn: Fecha Carga
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ID_KEY_RAW
+		dataType: string
+		lineageTag: a67022c5-1609-422e-95ba-3289441088c7
+		summarizeBy: none
+		sourceColumn: ID_KEY_RAW
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition input_raw = m
+		mode: import
+		source =
+				let
+				    Origen = Folder.Files("D:\Usuarios\mdelgadillo\Documents\luz_pbi\input_raw"),
+				    #"Archivos ocultos filtrados1" = Table.SelectRows(Origen, each [Attributes]?[Hidden]? <> true),
+				    #"Invocar función personalizada1" = Table.AddColumn(#"Archivos ocultos filtrados1", "Transformar archivo", each #"Transformar archivo"([Content])),
+				    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Invocar función personalizada1", {"Name", "Source.Name"}),
+				    #"Otras columnas quitadas1" = Table.SelectColumns(#"Columnas con nombre cambiado1", {"Source.Name", "Transformar archivo"}),
+				    #"Columna de tabla expandida1" = Table.ExpandTableColumn(#"Otras columnas quitadas1", "Transformar archivo", Table.ColumnNames(#"Transformar archivo"(#"Archivo de ejemplo"))),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columna de tabla expandida1",{{"Source.Name", type text}, {"SUMINISTRO", Int64.Type}, {"CONTRATO", Int64.Type}, {"RAZON_SOCIAL", type text}, {"BARRIO", type text}, {"DIRECCION", type text}, {"TELEFONO", type text}, {"TELEFONO_CELULAR", type text}, {"FECHA_EJECUCION", Int64.Type}, {"COSTO_INSTALACION", type text}, {"MOTIVO", type text}, {"ORD_NUMERO", Int64.Type}, {"ESTADO_CONTRATO", type text}, {"TARIFA", type text}, {"CONTEO_DIAS_DEMORA", type text}, {"ORD_FECHA_GENERACION", Int64.Type}, {"DISTRITO_ORIGEN_NOMBRE", type text}, {"DISTRITO_ORIGEN_DESTINO", type text}, {"SECTOR_ORIGEN", type text}, {"SECTOR_DESTINO", type text}, {"ORD_DATOS_ADI", type text}, {"ORD_DATOS_RESULTADOS", type text}, {"NUMERO_DE_TRAMITE", type any}, {"ORD", type text}, {"CONTEO_CX_INF", type text}, {"CONTEO_CX_EN_ESPERA", type text}, {"COD_ERROR", type text}, {"DESCRIPCION", type text}, {"INFO_ADICIONAL", type text}, {"CONTEO_RO", type text}, {"SRV_DIRECCION", type text}, {"CALLE", type text}, {"ALTURA", type text}, {"PCT", type text}, {"TORRE", type any}, {"PISO", type any}, {"DEPTO", type text}, {"CLAVE_FACTURACION", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"TELEFONO", "TELEFONO_CELULAR"}),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Columnas quitadas",{{"FECHA_EJECUCION", type date}}),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Tipo cambiado1",{{"Source.Name", "input_raw_name"}}),
+				    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Columnas con nombre cambiado",{{"ORD_FECHA_GENERACION", type date}}),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Tipo cambiado2",{"DISTRITO_ORIGEN_NOMBRE", "DISTRITO_ORIGEN_DESTINO", "SECTOR_ORIGEN", "SECTOR_DESTINO", "ORD_DATOS_ADI", "ORD_DATOS_RESULTADOS", "CONTEO_CX_INF", "CONTEO_CX_EN_ESPERA", "ORD", "DESCRIPCION", "INFO_ADICIONAL", "CONTEO_RO", "SRV_DIRECCION", "CALLE", "ALTURA", "TORRE", "PISO", "DEPTO", "PCT", "ESTADO_CONTRATO", "COD_ERROR", "CLAVE_FACTURACION"}),
+				    #"Fecha Carga" = Table.AddColumn(#"Columnas quitadas1", "Fecha Carga", each Date.FromText(Text.Replace(Text.Middle([input_raw_name], 10, 8), "_", "/"),[Format="dd/MM/yy"])),
+				    #"Tipo date" = Table.TransformColumnTypes(#"Fecha Carga",{{"Fecha Carga", type date}}),
+				    ID_KEY_RAW = Table.AddColumn(#"Tipo date", "ID_KEY_RAW", each Text.From([SUMINISTRO]) & Date.ToText(Date.From([Fecha Carga]), "yyyyMMdd"))
+				in
+				    ID_KEY_RAW
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

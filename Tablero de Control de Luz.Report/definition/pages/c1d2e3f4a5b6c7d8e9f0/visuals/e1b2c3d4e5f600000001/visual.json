@@ -1,7 +1,14 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "e1b2c3d4e5f600000001",
-  "position": { "x": 640, "y": 490, "z": 31, "height": 222, "width": 626, "tabOrder": 31 },
+  "position": {
+    "x": 640,
+    "y": 490,
+    "z": 31,
+    "height": 222,
+    "width": 626,
+    "tabOrder": 31
+  },
   "visual": {
     "visualType": "barChart",
     "query": {
@@ -11,7 +18,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Fricción - Segundos Iniciales"
                 }
               },
@@ -21,7 +32,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Fricción - Antes de completar el mensaje"
                 }
               },
@@ -31,7 +46,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Fricción - Buzón de Voz / Contestador"
                 }
               },
@@ -41,7 +60,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Fricción - Otras Causas"
                 }
               },
@@ -56,41 +79,107 @@
       "dataPoint": [
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#B91C1C'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#B91C1C'"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "selector": { "metadata": "01_Medidas.Fricción - Segundos Iniciales" }
+          "selector": {
+            "metadata": "01_Medidas.Fricción - Segundos Iniciales"
+          }
         },
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#F97316'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F97316'"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "selector": { "metadata": "01_Medidas.Fricción - Antes de completar el mensaje" }
+          "selector": {
+            "metadata": "01_Medidas.Fricción - Antes de completar el mensaje"
+          }
         },
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#EAB308'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#EAB308'"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "selector": { "metadata": "01_Medidas.Fricción - Buzón de Voz / Contestador" }
+          "selector": {
+            "metadata": "01_Medidas.Fricción - Buzón de Voz / Contestador"
+          }
         },
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#64748B'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#64748B'"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "selector": { "metadata": "01_Medidas.Fricción - Otras Causas" }
+          "selector": {
+            "metadata": "01_Medidas.Fricción - Otras Causas"
+          }
         }
       ],
       "legend": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } },
-            "position": { "expr": { "Literal": { "Value": "'Bottom'" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bottom'"
+                }
+              }
+            }
           }
         }
       ],
       "labels": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]
@@ -99,15 +188,139 @@
       "title": [
         {
           "properties": {
-            "text": { "expr": { "Literal": { "Value": "'Análisis de Fricción en la Llamada'" } } },
-            "fontColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0F172A'" } } } } },
-            "fontSize": { "expr": { "Literal": { "Value": "13D" } } }
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Análisis de Fricción en la Llamada'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F172A'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
           }
         }
       ],
-      "background": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#FFFFFF'" } } } } } } } ],
-      "border": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "radius": { "expr": { "Literal": { "Value": "12D" } } } } } ]
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "39fe17a45c745b9d5d00",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Fricción - Segundos Iniciales"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9b13d6d0801ccec3a005",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Fricción - Antes de completar el mensaje"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a2f16786ec60c3ce769e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Fricción - Buzón de Voz / Contestador"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "59e2f6630e6a98266308",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Fricción - Otras Causas"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

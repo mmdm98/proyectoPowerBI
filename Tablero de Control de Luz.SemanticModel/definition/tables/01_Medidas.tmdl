@@ -193,6 +193,32 @@ table 01_Medidas
 		formatString: 0.0%
 		lineageTag: 1b000005-0000-4000-8000-000000000015
 
+	/// Desglose de sentimiento por volumen sobre la base de respuestas válidas (excluye "-" y vacíos). Mismo patrón que las medidas de Fricción.
+	measure 'Sentimiento - Positivo' =
+			CALCULATE(
+			    COUNT(output[Sentimiento Cliente]),
+			    output[Sentimiento Cliente] = "Positivo"
+			)
+		formatString: 0
+		lineageTag: 2c000001-0000-4000-8000-000000000021
+
+	measure 'Sentimiento - Neutral' =
+			CALCULATE(
+			    COUNT(output[Sentimiento Cliente]),
+			    output[Sentimiento Cliente] = "Neutral"
+			)
+		formatString: 0
+		lineageTag: 2c000002-0000-4000-8000-000000000022
+
+	measure 'Sentimiento - Negativo' =
+			CALCULATE(
+			    COUNT(output[Sentimiento Cliente]),
+			    output[Sentimiento Cliente] <> "-",
+			    NOT(output[Sentimiento Cliente] IN {"Positivo", "Neutral"})
+			)
+		formatString: 0
+		lineageTag: 2c000003-0000-4000-8000-000000000023
+
 	column Dummy
 		lineageTag: 40d71262-83ef-4e63-a3f3-e261057cbe42
 		summarizeBy: none

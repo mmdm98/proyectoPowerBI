@@ -18,7 +18,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Base de Datos"
                 }
               },
@@ -28,7 +32,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Contactados"
                 }
               },
@@ -38,7 +46,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Interactuaron con Luz"
                 }
               },
@@ -48,7 +60,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Solicitaron Conexión"
                 }
               },
@@ -58,7 +74,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "% Contactados"
                 }
               },
@@ -68,7 +88,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "% Interactuaron con Luz"
                 }
               },
@@ -78,7 +102,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "% Solicitaron Conexión"
                 }
               },
@@ -93,7 +121,11 @@
           {
             "field": {
               "Measure": {
-                "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "01_Medidas"
+                  }
+                },
                 "Property": "Base de Datos"
               }
             },
@@ -107,7 +139,13 @@
       "vega": [
         {
           "properties": {
-            "provider": { "expr": { "Literal": { "Value": "'vega'" } } },
+            "provider": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vega'"
+                }
+              }
+            },
             "jsonSpec": {
               "expr": {
                 "Literal": {
@@ -122,27 +160,101 @@
                 }
               }
             },
-            "enableTooltips": { "expr": { "Literal": { "Value": "true" } } },
-            "enableContextMenu": { "expr": { "Literal": { "Value": "true" } } },
-            "enableHighlight": { "expr": { "Literal": { "Value": "false" } } },
-            "enableSelection": { "expr": { "Literal": { "Value": "false" } } },
-            "selectionMaxDataPoints": { "expr": { "Literal": { "Value": "50D" } } },
-            "selectionMode": { "expr": { "Literal": { "Value": "'simple'" } } },
-            "version": { "expr": { "Literal": { "Value": "'6.2.0'" } } }
+            "enableTooltips": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableContextMenu": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableHighlight": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "selectionMaxDataPoints": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            },
+            "selectionMode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'simple'"
+                }
+              }
+            },
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'6.2.0'"
+                }
+              }
+            }
           }
         }
       ],
       "editor": [
         {
           "properties": {
-            "theme": { "expr": { "Literal": { "Value": "'dark'" } } }
+            "theme": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dark'"
+                }
+              }
+            }
           }
         }
       ],
       "developer": [
         {
           "properties": {
-            "version": { "expr": { "Literal": { "Value": "'1.9.1.0'" } } }
+            "version": {
+              "expr": {
+                "Literal": {
+                  "Value": "'1.9.1.0'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stateManagement": [
+        {
+          "properties": {
+            "viewportHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "570D"
+                }
+              }
+            },
+            "viewportWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "610D"
+                }
+              }
+            }
           }
         }
       ]

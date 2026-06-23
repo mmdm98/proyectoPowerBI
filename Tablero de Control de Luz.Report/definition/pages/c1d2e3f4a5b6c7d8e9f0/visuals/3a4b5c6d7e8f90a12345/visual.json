@@ -1,7 +1,14 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "3a4b5c6d7e8f90a12345",
-  "position": { "x": 12, "y": 200, "z": 3, "height": 22, "width": 1256, "tabOrder": 3 },
+  "position": {
+    "x": 11.671732522796352,
+    "y": 196.47416413373861,
+    "z": 3,
+    "height": 31.124620060790274,
+    "width": 1255.6838905775076,
+    "tabOrder": 3
+  },
   "visual": {
     "visualType": "textbox",
     "objects": {
@@ -13,10 +20,14 @@
                 "textRuns": [
                   {
                     "value": "PERIODO SELECCIONADO  ·  responde al segmentador de fecha",
-                    "textStyle": { "fontFamily": "Segoe UI Semibold", "fontSize": "12px", "fontWeight": "bold", "color": "#0F766E" }
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "8pt",
+                      "color": "#0f766e"
+                    }
                   }
-                ],
-                "horizontalTextAlignment": "left"
+                ]
               }
             ]
           }

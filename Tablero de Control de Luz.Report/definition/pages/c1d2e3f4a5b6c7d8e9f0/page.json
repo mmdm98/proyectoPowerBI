@@ -3,7 +3,7 @@
   "name": "c1d2e3f4a5b6c7d8e9f0",
   "displayName": "Resumen Ejecutivo",
   "displayOption": "FitToPage",
-  "height": 720,
+  "height": 920,
   "width": 1280,
   "objects": {
     "background": [
@@ -11,10 +11,22 @@
         "properties": {
           "color": {
             "solid": {
-              "color": { "expr": { "Literal": { "Value": "'#F5F7FA'" } } }
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F5F7FA'"
+                  }
+                }
+              }
             }
           },
-          "transparency": { "expr": { "Literal": { "Value": "0D" } } }
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
         }
       }
     ]

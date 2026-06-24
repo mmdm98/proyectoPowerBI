@@ -4,10 +4,10 @@
   "position": {
     "x": 1002.6760563380284,
     "y": 451.69014084507052,
-    "z": 11,
+    "z": 5000,
     "height": 134.08450704225353,
     "width": 277.18309859154931,
-    "tabOrder": 11
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -108,20 +108,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "9e56fb0b05d7560eac72",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Cortaron Comunicación"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

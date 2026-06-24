@@ -4,10 +4,10 @@
   "position": {
     "x": 864.09859154929768,
     "y": 0,
-    "z": 3002,
+    "z": 5000,
     "height": 431.54929577464793,
     "width": 197.18309859154931,
-    "tabOrder": 3002
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "tableEx",
@@ -229,25 +229,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "80ba5cae1183769db018",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "main"
-                  }
-                },
-                "Property": "input_majo.output.Interactores"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

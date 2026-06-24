@@ -4,10 +4,10 @@
   "position": {
     "x": 725.492957746479,
     "y": 585.77464788732414,
-    "z": 13,
+    "z": 7000,
     "height": 134.08450704225353,
     "width": 277.18309859154931,
-    "tabOrder": 13
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -162,20 +162,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "532f03d90974a7a431b6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Solicitaron Conexión"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

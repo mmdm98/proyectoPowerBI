@@ -4,10 +4,10 @@
   "position": {
     "x": 220.67173924277188,
     "y": 100.81155568973331,
-    "z": 6,
+    "z": 6000,
     "height": 92,
     "width": 204,
-    "tabOrder": 6
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -28,9 +28,41 @@
               },
               "queryRef": "01_Medidas.Contactados (Histórico)",
               "nativeQueryRef": "Contactados (Histórico)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Contactados (Histórico)"
+                }
+              },
+              "queryRef": "01_Medidas.% Contactados (Histórico)",
+              "nativeQueryRef": "% Contactados (Histórico)"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "01_Medidas"
+                  }
+                },
+                "Property": "Contactados (Histórico)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -47,6 +79,20 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Contactados (Histórico)"
           }
         }
       ],
@@ -76,6 +122,55 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Contactados (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.Contactados (Histórico)"
           }
         }
       ],
@@ -215,6 +310,48 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Contactados (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.Contactados (Histórico)"
+          }
         }
       ]
     },
@@ -323,7 +460,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "bd544eedb1b3d0bca3bd",
+        "name": "c0269c271c0031005479",
         "field": {
           "Measure": {
             "Expression": {
@@ -332,6 +469,20 @@
               }
             },
             "Property": "Contactados (Histórico)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9bf5939051800cc2a206",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Contactados (Histórico)"
           }
         },
         "type": "Advanced"

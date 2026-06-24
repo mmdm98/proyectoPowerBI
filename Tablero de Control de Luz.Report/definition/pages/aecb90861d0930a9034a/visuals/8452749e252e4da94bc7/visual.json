@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 157.74647887323945,
-    "z": 3004,
+    "z": 7000,
     "height": 281.69014084507046,
     "width": 469.85915492957747,
-    "tabOrder": 3004
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "tableEx",
@@ -118,70 +118,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "72c40d13d782c25ecab6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "main"
-              }
-            },
-            "Property": "SUMINISTRO"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5bccc0549c90b6273204",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "main"
-                  }
-                },
-                "Property": "SUMINISTRO"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7793fec89764e0e02ac1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "main"
-              }
-            },
-            "Property": "DIRECCION"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4bf575c324b901b06ce2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "main"
-              }
-            },
-            "Property": "input_majo.output.Contactados"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

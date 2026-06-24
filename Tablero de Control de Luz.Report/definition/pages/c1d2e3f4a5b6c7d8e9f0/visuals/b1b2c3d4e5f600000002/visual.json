@@ -4,10 +4,10 @@
   "position": {
     "x": 221,
     "y": 228,
-    "z": 7,
+    "z": 7000,
     "height": 92,
     "width": 204,
-    "tabOrder": 7
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -319,23 +319,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "047f7ded9b01811d2a01",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Contactados"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

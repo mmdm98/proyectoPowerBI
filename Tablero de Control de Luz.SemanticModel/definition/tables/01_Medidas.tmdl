@@ -219,6 +219,36 @@ table 01_Medidas
 		formatString: 0
 		lineageTag: 2c000003-0000-4000-8000-000000000023
 
+	/// Promedios históricos de duración de habla en minutos (Seg / 60). Inmunes al filtro de fecha vía REMOVEFILTERS(DimCalendario).
+	measure 'Promedio Histórico Tiempo Cliente (Minutos)' =
+			CALCULATE(
+			    DIVIDE(AVERAGE(output[Tiempo Habla Cliente Seg]), 60),
+			    REMOVEFILTERS(DimCalendario)
+			)
+		formatString: 0.0
+		lineageTag: 3a000001-0000-4000-8000-000000000031
+
+	measure 'Promedio Histórico Tiempo Luz (Minutos)' =
+			CALCULATE(
+			    DIVIDE(AVERAGE(output[Tiempo Habla Bot Seg]), 60),
+			    REMOVEFILTERS(DimCalendario)
+			)
+		formatString: 0.0
+		lineageTag: 3a000002-0000-4000-8000-000000000032
+
+	/// Conteo de registros por Impedimento y su proporción sobre el total (para el Top 5 de impedimentos).
+	measure 'Conteo Impedimento' = COUNT(output[Impedimento])
+		formatString: 0
+		lineageTag: 3b000001-0000-4000-8000-000000000033
+
+	measure '% Impedimento' =
+			DIVIDE(
+			    [Conteo Impedimento],
+			    CALCULATE([Conteo Impedimento], REMOVEFILTERS(output[Impedimento]))
+			)
+		formatString: 0.0%
+		lineageTag: 3b000002-0000-4000-8000-000000000034
+
 	column Dummy
 		lineageTag: 40d71262-83ef-4e63-a3f3-e261057cbe42
 		summarizeBy: none

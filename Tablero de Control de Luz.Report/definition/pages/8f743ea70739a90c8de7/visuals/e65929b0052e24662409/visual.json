@@ -4,10 +4,10 @@
   "position": {
     "x": 183.75,
     "y": 206.25,
-    "z": 3001,
+    "z": 2000,
     "height": 390,
     "width": 952.5,
-    "tabOrder": 3001
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineChart",
@@ -374,34 +374,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "f46dbf36d8ba0e6878b9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Contactados"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "722cc9b08c3561574997",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Interactuaron con Luz"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

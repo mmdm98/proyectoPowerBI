@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "aa11bb22cc33dd44ee05",
+  "position": { "x": 330, "y": 1262, "z": 104, "height": 110, "width": 310, "tabOrder": 104 },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "01_Medidas" } }, "Property": "Promedio Histórico Tiempo Luz (Minutos)" } },
+              "queryRef": "01_Medidas.Promedio Histórico Tiempo Luz (Minutos)",
+              "nativeQueryRef": "Promedio Histórico Tiempo Luz (Minutos)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "background": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#EFF4FF'" } } } } } } } ],
+      "border": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#8B5CF6'" } } } } }, "radius": { "expr": { "Literal": { "Value": "12D" } } } } } ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

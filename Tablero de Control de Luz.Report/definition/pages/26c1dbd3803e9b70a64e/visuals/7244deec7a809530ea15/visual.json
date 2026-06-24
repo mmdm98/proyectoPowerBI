@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 76.619718309859152,
-    "z": 4,
+    "z": 4000,
     "height": 73.239436619718319,
     "width": 278.3098591549296,
-    "tabOrder": 4
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -128,23 +128,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "631b60c4087ee830095d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimCalendario"
-              }
-            },
-            "Property": "Dia"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

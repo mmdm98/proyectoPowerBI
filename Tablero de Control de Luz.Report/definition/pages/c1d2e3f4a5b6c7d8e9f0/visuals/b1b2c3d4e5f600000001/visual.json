@@ -4,10 +4,10 @@
   "position": {
     "x": 10,
     "y": 228,
-    "z": 5,
+    "z": 5000,
     "height": 92,
     "width": 204,
-    "tabOrder": 5
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -319,23 +319,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "31f67999e1e266a09d52",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Base de Datos"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

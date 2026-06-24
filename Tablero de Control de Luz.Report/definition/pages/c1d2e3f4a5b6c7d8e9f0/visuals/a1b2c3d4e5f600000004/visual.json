@@ -4,10 +4,10 @@
   "position": {
     "x": 642.67173924277188,
     "y": 100.81155568973331,
-    "z": 10,
+    "z": 10000,
     "height": 92,
     "width": 204,
-    "tabOrder": 10
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -28,9 +28,42 @@
               },
               "queryRef": "01_Medidas.Interactuaron con Luz (Histórico)",
               "nativeQueryRef": "Interactuaron con Luz (Histórico)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Interactuaron con Luz (Histórico)"
+                }
+              },
+              "queryRef": "01_Medidas.% Interactuaron con Luz (Histórico)",
+              "nativeQueryRef": "% Interactuaron (Histórico)",
+              "displayName": "% Interactuaron (Histórico)"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "01_Medidas"
+                  }
+                },
+                "Property": "Interactuaron con Luz (Histórico)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -76,6 +109,41 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Interactuaron con Luz (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.Interactuaron con Luz (Histórico)"
           }
         }
       ],
@@ -215,6 +283,41 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Interactuaron con Luz (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.Interactuaron con Luz (Histórico)"
+          }
         }
       ]
     },
@@ -323,7 +426,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a307673d841e2cbe23c6",
+        "name": "9e5f9bf1e8401c58a429",
         "field": {
           "Measure": {
             "Expression": {
@@ -332,6 +435,20 @@
               }
             },
             "Property": "Interactuaron con Luz (Histórico)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "33f90d05618b9920e7a1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Interactuaron con Luz (Histórico)"
           }
         },
         "type": "Advanced"

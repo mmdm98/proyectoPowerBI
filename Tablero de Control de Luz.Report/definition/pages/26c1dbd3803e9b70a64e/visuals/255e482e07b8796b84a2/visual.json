@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 0,
-    "z": 3,
+    "z": 3000,
     "height": 73.239436619718319,
     "width": 278.3098591549296,
-    "tabOrder": 3
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "slicer",
@@ -284,37 +284,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "88a94092b816e8699920",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimCalendario"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "eccb369674c677a0db0c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimCalendario"
-              }
-            },
-            "Property": "Mes"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

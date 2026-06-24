@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "aa11bb22cc33dd44ee02",
+  "position": { "x": 12, "y": 958, "z": 101, "height": 290, "width": 620, "tabOrder": 101 },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": { "SourceRef": { "Entity": "DimCalendario" } },
+                  "Property": "Mes"
+                }
+              },
+              "queryRef": "DimCalendario.Mes",
+              "nativeQueryRef": "Mes",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Contactados"
+                }
+              },
+              "queryRef": "01_Medidas.Contactados",
+              "nativeQueryRef": "Contactados"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "Interactuaron con Luz"
+                }
+              },
+              "queryRef": "01_Medidas.Interactuaron con Luz",
+              "nativeQueryRef": "Interactuaron con Luz"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": { "SourceRef": { "Entity": "DimCalendario" } },
+                "Property": "Mes"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#6366F1'" } } } } }
+          },
+          "selector": { "metadata": "01_Medidas.Contactados" }
+        },
+        {
+          "properties": {
+            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#10B981'" } } } } }
+          },
+          "selector": { "metadata": "01_Medidas.Interactuaron con Luz" }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": { "expr": { "Literal": { "Value": "true" } } },
+            "position": { "expr": { "Literal": { "Value": "'Top'" } } }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": { "expr": { "Literal": { "Value": "true" } } }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": { "expr": { "Literal": { "Value": "'Evolución Mensual: Contactados vs. Interactuaron'" } } },
+            "fontColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0F172A'" } } } } },
+            "fontSize": { "expr": { "Literal": { "Value": "13D" } } }
+          }
+        }
+      ],
+      "background": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#FFFFFF'" } } } } } } } ],
+      "border": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "radius": { "expr": { "Literal": { "Value": "12D" } } } } } ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

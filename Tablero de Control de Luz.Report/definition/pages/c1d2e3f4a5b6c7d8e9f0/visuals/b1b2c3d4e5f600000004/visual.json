@@ -4,10 +4,10 @@
   "position": {
     "x": 643,
     "y": 228,
-    "z": 11,
+    "z": 11000,
     "height": 92,
     "width": 204,
-    "tabOrder": 11
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -319,23 +319,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "924da295579b0d06e0aa",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Interactuaron con Luz"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

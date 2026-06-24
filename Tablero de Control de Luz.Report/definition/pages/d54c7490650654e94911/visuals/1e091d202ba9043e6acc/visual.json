@@ -86,23 +86,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "15b7825e34b43759645d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimCalendario"
-              }
-            },
-            "Property": "Dia"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

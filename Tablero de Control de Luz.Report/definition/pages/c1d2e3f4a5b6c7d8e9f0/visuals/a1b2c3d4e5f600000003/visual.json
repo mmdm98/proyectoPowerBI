@@ -4,10 +4,10 @@
   "position": {
     "x": 431.67173924277188,
     "y": 100.81155568973331,
-    "z": 8,
+    "z": 8000,
     "height": 92,
     "width": 204,
-    "tabOrder": 8
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -28,9 +28,42 @@
               },
               "queryRef": "01_Medidas.Cortaron Comunicación (Histórico)",
               "nativeQueryRef": "Cortaron Comunicación (Histórico)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Cortaron Comunicación (Histórico)"
+                }
+              },
+              "queryRef": "01_Medidas.% Cortaron Comunicación (Histórico)",
+              "nativeQueryRef": "% Cortaron (Histórico)",
+              "displayName": "% Cortaron (Histórico)"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "01_Medidas"
+                  }
+                },
+                "Property": "Cortaron Comunicación (Histórico)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -47,6 +80,20 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Contactados (Histórico)"
           }
         }
       ],
@@ -69,13 +116,76 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "8D"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Contactados (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.Contactados (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.Cortaron Comunicación (Histórico)"
           }
         }
       ],
@@ -210,6 +320,96 @@
                   "Value": "'left'"
                 }
               }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Contactados (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Cortaron Comunicación (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.Cortaron Comunicación (Histórico)"
+          }
+        }
+      ],
+      "cardCalloutArea": [
+        {
+          "properties": {
+            "paddingIndividual": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           },
           "selector": {
@@ -323,7 +523,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "d40bf69668e7608408b0",
+        "name": "f47cfe403ad84086a7e7",
         "field": {
           "Measure": {
             "Expression": {
@@ -332,6 +532,20 @@
               }
             },
             "Property": "Cortaron Comunicación (Histórico)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5f7e718160b1a300a06a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Cortaron Comunicación (Histórico)"
           }
         },
         "type": "Advanced"

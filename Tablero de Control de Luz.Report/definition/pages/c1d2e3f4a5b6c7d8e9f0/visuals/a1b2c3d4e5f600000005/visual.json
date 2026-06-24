@@ -4,10 +4,10 @@
   "position": {
     "x": 853.67173924277188,
     "y": 100.81155568973331,
-    "z": 12,
+    "z": 12000,
     "height": 92,
     "width": 204,
-    "tabOrder": 12
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -28,9 +28,42 @@
               },
               "queryRef": "01_Medidas.Solicitaron Conexión (Histórico)",
               "nativeQueryRef": "Solicitaron Conexión (Histórico)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Solicitaron Conexión (Histórico)"
+                }
+              },
+              "queryRef": "01_Medidas.% Solicitaron Conexión (Histórico)",
+              "nativeQueryRef": "% Solicitaron CX (Histórico)",
+              "displayName": "% Solicitaron CX (Histórico)"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "01_Medidas"
+                  }
+                },
+                "Property": "Solicitaron Conexión (Histórico)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -76,6 +109,41 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.Solicitaron Conexión (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Solicitaron Conexión (Histórico)"
           }
         }
       ],
@@ -215,6 +283,41 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.% Solicitaron Conexión (Histórico)"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "01_Medidas.Solicitaron Conexión (Histórico)"
+          }
         }
       ]
     },
@@ -323,7 +426,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "96a13e0ad6b42b50be4c",
+        "name": "851fb2aa98b4bb356650",
         "field": {
           "Measure": {
             "Expression": {
@@ -332,6 +435,20 @@
               }
             },
             "Property": "Solicitaron Conexión (Histórico)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bf10317e53a504eb01e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Solicitaron Conexión (Histórico)"
           }
         },
         "type": "Advanced"

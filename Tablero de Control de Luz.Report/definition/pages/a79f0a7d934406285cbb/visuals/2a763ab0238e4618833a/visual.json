@@ -4,10 +4,10 @@
   "position": {
     "x": 467.6056338028169,
     "y": 166.7605633802817,
-    "z": 9,
+    "z": 3000,
     "height": 274.92957746478874,
     "width": 812.3943661971831,
-    "tabOrder": 9
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
@@ -205,65 +205,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "416c6924d1bc69450dee",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Base de Datos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "192ad9f1070ae332a89e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Interactuaron con Luz"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6342cd05505bc81e7607",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Solicitaron Conexión"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "bc28fe913a9242e5e892",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Contactados"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

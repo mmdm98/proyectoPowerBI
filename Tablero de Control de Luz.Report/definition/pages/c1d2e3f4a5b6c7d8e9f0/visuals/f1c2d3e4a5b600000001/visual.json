@@ -1,7 +1,14 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "f1c2d3e4a5b600000001",
-  "position": { "x": 12, "y": 730, "z": 32, "height": 170, "width": 1254, "tabOrder": 32 },
+  "position": {
+    "x": 12,
+    "y": 730,
+    "z": 21000,
+    "height": 170,
+    "width": 1254,
+    "tabOrder": 21000
+  },
   "visual": {
     "visualType": "hundredPercentStackedBarChart",
     "query": {
@@ -11,7 +18,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Sentimiento - Positivo"
                 }
               },
@@ -21,7 +32,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Sentimiento - Neutral"
                 }
               },
@@ -31,7 +46,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Sentimiento - Negativo"
                 }
               },
@@ -46,35 +65,89 @@
       "dataPoint": [
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#16A34A'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1D8813'"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "selector": { "metadata": "01_Medidas.Sentimiento - Positivo" }
+          "selector": {
+            "metadata": "01_Medidas.Sentimiento - Positivo"
+          }
         },
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0EA5E9'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#8DB513'"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "selector": { "metadata": "01_Medidas.Sentimiento - Neutral" }
+          "selector": {
+            "metadata": "01_Medidas.Sentimiento - Neutral"
+          }
         },
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#DC2626'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#DC2626'"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "selector": { "metadata": "01_Medidas.Sentimiento - Negativo" }
+          "selector": {
+            "metadata": "01_Medidas.Sentimiento - Negativo"
+          }
         }
       ],
       "legend": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } },
-            "position": { "expr": { "Literal": { "Value": "'Bottom'" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bottom'"
+                }
+              }
+            }
           }
         }
       ],
       "labels": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]
@@ -83,15 +156,125 @@
       "title": [
         {
           "properties": {
-            "text": { "expr": { "Literal": { "Value": "'Distribución del Sentimiento del Cliente'" } } },
-            "fontColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0F172A'" } } } } },
-            "fontSize": { "expr": { "Literal": { "Value": "13D" } } }
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribución del Sentimiento del Cliente'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F172A'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
           }
         }
       ],
-      "background": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#FFFFFF'" } } } } } } } ],
-      "border": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "radius": { "expr": { "Literal": { "Value": "12D" } } } } } ]
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7af4aef21704c01c7320",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Sentimiento - Positivo"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0b94cda7602041c0d520",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Sentimiento - Neutral"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "86f726414120d560a1eb",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Sentimiento - Negativo"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

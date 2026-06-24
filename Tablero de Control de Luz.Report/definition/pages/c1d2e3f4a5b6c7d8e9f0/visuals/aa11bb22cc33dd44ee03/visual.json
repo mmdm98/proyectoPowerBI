@@ -1,0 +1,84 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "aa11bb22cc33dd44ee03",
+  "position": { "x": 648, "y": 958, "z": 102, "height": 290, "width": 620, "tabOrder": 102 },
+  "visual": {
+    "visualType": "barChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": { "SourceRef": { "Entity": "output" } },
+                  "Property": "Impedimento"
+                }
+              },
+              "queryRef": "output.Impedimento",
+              "nativeQueryRef": "Impedimento"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Property": "% Impedimento"
+                }
+              },
+              "queryRef": "01_Medidas.% Impedimento",
+              "nativeQueryRef": "% Impedimento"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                "Property": "% Impedimento"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0EA5E9'" } } } } }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": { "expr": { "Literal": { "Value": "true" } } }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": { "expr": { "Literal": { "Value": "'Top 5 Impedimentos (% sobre total)'" } } },
+            "fontColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0F172A'" } } } } },
+            "fontSize": { "expr": { "Literal": { "Value": "13D" } } }
+          }
+        }
+      ],
+      "background": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#FFFFFF'" } } } } } } } ],
+      "border": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "radius": { "expr": { "Literal": { "Value": "12D" } } } } } ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

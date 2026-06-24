@@ -4,10 +4,10 @@
   "position": {
     "x": 1065,
     "y": 228,
-    "z": 15,
+    "z": 15000,
     "height": 92,
     "width": 204,
-    "tabOrder": 15
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -319,23 +319,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "314e40070601e2d045cb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Avisarán al Normalizar"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

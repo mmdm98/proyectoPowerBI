@@ -4,10 +4,10 @@
   "position": {
     "x": 645,
     "y": 130,
-    "z": 4,
+    "z": 4000,
     "height": 580,
     "width": 625,
-    "tabOrder": 4
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
@@ -232,5 +232,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "89a1520bdaa281ab3b96",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Cortaron Comunicación"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "859ded71351863d27e19",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Fricción - Segundos Iniciales"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8d3cb1c0996a914d0531",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Fricción - Antes de completar el mensaje"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3a5b80c4497bda37dcb2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Fricción - Buzón de Voz / Contestador"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b28525d51b3b6709e7ce",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Fricción - Otras Causas"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

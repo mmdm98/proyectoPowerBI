@@ -4,10 +4,10 @@
   "position": {
     "x": 851,
     "y": 330,
-    "z": 29,
+    "z": 18000,
     "height": 150,
     "width": 204,
-    "tabOrder": 29
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -319,23 +319,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "06e556dca1b6901106da",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "% Interrupciones (Barge-in)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

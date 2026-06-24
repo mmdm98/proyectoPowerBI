@@ -4,10 +4,10 @@
   "position": {
     "x": 1002.6760563380284,
     "y": 585.77464788732414,
-    "z": 14,
+    "z": 8000,
     "height": 134.08450704225353,
     "width": 277.18309859154931,
-    "tabOrder": 14
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -162,20 +162,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "451e9a9b9d972d5adec2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Avisarán al Normalizar"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -4,10 +4,10 @@
   "position": {
     "x": 9.6717392427718885,
     "y": 100.81155568973331,
-    "z": 4,
+    "z": 4000,
     "height": 92,
     "width": 204,
-    "tabOrder": 4
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -297,6 +297,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -316,6 +323,19 @@
             "id": "default"
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -323,7 +343,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "bd48f4c538c38414102c",
+        "name": "1b46db394d1032a086b1",
         "field": {
           "Measure": {
             "Expression": {

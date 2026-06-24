@@ -284,37 +284,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "03541daac0d15771c62b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimCalendario"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c92e44b7d90e823e3928",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimCalendario"
-              }
-            },
-            "Property": "Mes"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

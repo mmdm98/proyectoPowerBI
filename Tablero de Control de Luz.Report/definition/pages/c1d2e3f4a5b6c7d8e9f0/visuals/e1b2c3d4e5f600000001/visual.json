@@ -4,13 +4,13 @@
   "position": {
     "x": 640,
     "y": 490,
-    "z": 31,
+    "z": 20000,
     "height": 222,
     "width": 626,
-    "tabOrder": 31
+    "tabOrder": 20000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "hundredPercentStackedBarChart",
     "query": {
       "queryState": {
         "Y": {
@@ -262,65 +262,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "39fe17a45c745b9d5d00",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Fricción - Segundos Iniciales"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9b13d6d0801ccec3a005",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Fricción - Antes de completar el mensaje"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a2f16786ec60c3ce769e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Fricción - Buzón de Voz / Contestador"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "59e2f6630e6a98266308",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Fricción - Otras Causas"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

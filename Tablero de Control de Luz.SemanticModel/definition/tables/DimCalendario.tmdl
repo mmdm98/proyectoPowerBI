@@ -117,6 +117,15 @@ table DimCalendario
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Lunes de la semana de cada fecha (ISO, lunes = inicio). Útil para agrupaciones semanales (Week-over-Week).
+	column 'Inicio Semana' = DimCalendario[Date] - WEEKDAY(DimCalendario[Date], 2) + 1
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 3d000001-0000-4000-8000-000000000041
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DimCalendario = calculated
 		mode: import
 		source =

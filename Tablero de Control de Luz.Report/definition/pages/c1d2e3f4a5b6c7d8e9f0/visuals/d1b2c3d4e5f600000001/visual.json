@@ -4,10 +4,10 @@
   "position": {
     "x": 640,
     "y": 330,
-    "z": 28,
+    "z": 17000,
     "height": 150,
     "width": 204,
-    "tabOrder": 28
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -319,23 +319,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f945a8c3c4051da53722",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "% Sentimiento Positivo/Neutral"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

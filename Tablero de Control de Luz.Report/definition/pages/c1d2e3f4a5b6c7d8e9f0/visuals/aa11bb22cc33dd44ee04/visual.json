@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "aa11bb22cc33dd44ee04",
+  "position": { "x": 12, "y": 1262, "z": 103, "height": 110, "width": 310, "tabOrder": 103 },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "01_Medidas" } }, "Property": "Promedio Histórico Tiempo Cliente (Minutos)" } },
+              "queryRef": "01_Medidas.Promedio Histórico Tiempo Cliente (Minutos)",
+              "nativeQueryRef": "Promedio Histórico Tiempo Cliente (Minutos)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "background": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#EFF4FF'" } } } } } } } ],
+      "border": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0EA5E9'" } } } } }, "radius": { "expr": { "Literal": { "Value": "12D" } } } } } ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

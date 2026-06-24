@@ -1,7 +1,14 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "aa11bb22cc33dd44ee03",
-  "position": { "x": 648, "y": 958, "z": 102, "height": 290, "width": 620, "tabOrder": 102 },
+  "position": {
+    "x": 648,
+    "y": 958,
+    "z": 3000,
+    "height": 290,
+    "width": 620,
+    "tabOrder": 3000
+  },
   "visual": {
     "visualType": "barChart",
     "query": {
@@ -11,12 +18,17 @@
             {
               "field": {
                 "Column": {
-                  "Expression": { "SourceRef": { "Entity": "output" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "output"
+                    }
+                  },
                   "Property": "Impedimento"
                 }
               },
               "queryRef": "output.Impedimento",
-              "nativeQueryRef": "Impedimento"
+              "nativeQueryRef": "Impedimento",
+              "active": true
             }
           ]
         },
@@ -25,7 +37,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "% Impedimento"
                 }
               },
@@ -40,7 +56,11 @@
           {
             "field": {
               "Measure": {
-                "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "01_Medidas"
+                  }
+                },
                 "Property": "% Impedimento"
               }
             },
@@ -54,14 +74,30 @@
       "dataPoint": [
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0EA5E9'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0EA5E9'"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       ],
       "labels": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]
@@ -70,15 +106,162 @@
       "title": [
         {
           "properties": {
-            "text": { "expr": { "Literal": { "Value": "'Top 5 Impedimentos (% sobre total)'" } } },
-            "fontColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0F172A'" } } } } },
-            "fontSize": { "expr": { "Literal": { "Value": "13D" } } }
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top Impedimentos (% sobre total)'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F172A'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
           }
         }
       ],
-      "background": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#FFFFFF'" } } } } } } } ],
-      "border": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "radius": { "expr": { "Literal": { "Value": "12D" } } } } } ]
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "68ff30f4b3329d00165d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "output"
+              }
+            },
+            "Property": "Impedimento"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "o",
+              "Entity": "output",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "o"
+                              }
+                            },
+                            "Property": "Impedimento"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'-'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }

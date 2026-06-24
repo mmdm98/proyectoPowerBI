@@ -220,20 +220,44 @@ table 01_Medidas
 		lineageTag: 2c000003-0000-4000-8000-000000000023
 
 	/// Promedios históricos de duración de habla en minutos (Seg / 60). Inmunes al filtro de fecha vía REMOVEFILTERS(DimCalendario).
-	measure 'Promedio Histórico Tiempo Cliente (Minutos)' =
-			CALCULATE(
-			    DIVIDE(AVERAGE(output[Tiempo Habla Cliente Seg]), 60),
-			    REMOVEFILTERS(DimCalendario)
-			)
-		formatString: 0.0
+	measure 'Promedio Histórico Tiempo Cliente (MM:ss)' = ```
+			
+			VAR PromedioSegundos = 
+			    CALCULATE(
+			        AVERAGE(output[Tiempo Habla Cliente Seg]),
+			        REMOVEFILTERS(DimCalendario)
+			    )
+			
+			VAR Minutos = TRUNC(PromedioSegundos / 60)
+			VAR Segundos = ROUND(MOD(PromedioSegundos, 60), 0)
+			
+			RETURN
+			    IF(
+			        NOT ISBLANK(PromedioSegundos),
+			        FORMAT(Minutos, "00") & ":" & FORMAT(Segundos, "00"),
+			        BLANK()
+			    )
+			```
 		lineageTag: 3a000001-0000-4000-8000-000000000031
 
-	measure 'Promedio Histórico Tiempo Luz (Minutos)' =
-			CALCULATE(
-			    DIVIDE(AVERAGE(output[Tiempo Habla Bot Seg]), 60),
-			    REMOVEFILTERS(DimCalendario)
-			)
-		formatString: 0.0
+	measure 'Promedio Histórico Tiempo Luz (MM:ss)' = ```
+			
+			VAR PromedioSegundos = 
+			    CALCULATE(
+			        AVERAGE(output[Tiempo Habla Bot Seg]),
+			        REMOVEFILTERS(DimCalendario)
+			    )
+			
+			VAR Minutos = TRUNC(PromedioSegundos / 60)
+			VAR Segundos = ROUND(MOD(PromedioSegundos, 60), 0)
+			
+			RETURN
+			    IF(
+			        NOT ISBLANK(PromedioSegundos),
+			        FORMAT(Minutos, "00") & ":" & FORMAT(Segundos, "00"),
+			        BLANK()
+			    )
+			```
 		lineageTag: 3a000002-0000-4000-8000-000000000032
 
 	/// Conteo de registros por Impedimento y su proporción sobre el total (para el Top 5 de impedimentos).

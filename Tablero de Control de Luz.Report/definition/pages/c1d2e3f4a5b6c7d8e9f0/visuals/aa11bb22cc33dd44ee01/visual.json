@@ -1,7 +1,14 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "aa11bb22cc33dd44ee01",
-  "position": { "x": 12, "y": 924, "z": 100, "height": 26, "width": 1256, "tabOrder": 100 },
+  "position": {
+    "x": 11.818181818181817,
+    "y": 921.81818181818176,
+    "z": 1000,
+    "height": 28.18181818181818,
+    "width": 1253.6363636363635,
+    "tabOrder": 1000
+  },
   "visual": {
     "visualType": "textbox",
     "objects": {
@@ -13,10 +20,14 @@
                 "textRuns": [
                   {
                     "value": "ANÁLISIS TEMPORAL Y TENDENCIAS",
-                    "textStyle": { "fontFamily": "Segoe UI Semibold", "fontSize": "13px", "fontWeight": "bold", "color": "#0F172A" }
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontSize": "13px",
+                      "color": "#0f172a"
+                    }
                   }
-                ],
-                "horizontalTextAlignment": "left"
+                ]
               }
             ]
           }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "1a2b3c4d5e6f70819203",
   "position": {
-    "x": 829.66565349544078,
-    "y": 9.72644376899696,
-    "z": 1000,
-    "height": 68.085106382978722,
-    "width": 438.66261398176295,
-    "tabOrder": 1000
+    "x": 581.42857142857144,
+    "y": 10,
+    "z": 8000,
+    "height": 64.285714285714292,
+    "width": 684.28571428571433,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -18,12 +18,16 @@
             {
               "field": {
                 "Column": {
-                  "Expression": { "SourceRef": { "Entity": "DimCalendario" } },
-                  "Property": "Mes"
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCalendario"
+                    }
+                  },
+                  "Property": "MesCorto"
                 }
               },
-              "queryRef": "DimCalendario.Mes",
-              "nativeQueryRef": "Mes",
+              "queryRef": "DimCalendario.MesCorto",
+              "nativeQueryRef": "MesCorto",
               "active": true
             }
           ]
@@ -34,15 +38,46 @@
       "data": [
         {
           "properties": {
-            "mode": { "expr": { "Literal": { "Value": "'Basic'" } } }
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
           }
         }
       ],
       "header": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } },
-            "text": { "expr": { "Literal": { "Value": "'Seleccionar Mes'" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Seleccionar Mes'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
           }
         }
       ]

@@ -4,10 +4,10 @@
   "position": {
     "x": 1064.671739242772,
     "y": 100.81155568973331,
-    "z": 14000,
+    "z": 21000,
     "height": 92,
     "width": 204,
-    "tabOrder": 14000
+    "tabOrder": 21000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -422,37 +422,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d7ce8904a0e11c02e504",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Avisarán al Normalizar (Histórico)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "058964d9ab2c7d5d7486",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "% Avisarán al Normalizar (Histórico)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

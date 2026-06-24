@@ -9,6 +9,10 @@
         "page": "2.3.0"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "ResumenEjecutivoPremium",
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -27,7 +31,8 @@
     ]
   },
   "publicCustomVisuals": [
-    "deneb7E15AEF80B9E4D4F8E12924291ECE89A"
+    "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "textFilter25A4896A83E0487089E2B90C9AE57C8A"
   ],
   "resourcePackages": [
     {
@@ -38,6 +43,17 @@
           "name": "CY26SU02",
           "path": "BaseThemes/CY26SU02.json",
           "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "ResumenEjecutivoPremium.json",
+          "path": "ResumenEjecutivoPremium.json",
+          "type": "CustomTheme"
         }
       ]
     }

@@ -2431,6 +2431,16 @@ cultureInfo es-ES
 			          "suministro": {
 			            "State": "Generated"
 			          }
+			        },
+			        {
+			          "Buscar Suministro": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -8465,6 +8475,139 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "dim_calendario.inicio_semana": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "Inicio Semana"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "inicio semana": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "entity_01_medida.promedio_histórico_tiempo_cliente_MMss": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "01_Medidas",
+			          "ConceptualProperty": "Promedio Histórico Tiempo Cliente (MM:ss)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio histórico tiempo cliente (MM:ss)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "promedio histórico tiempo cliente": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Tiempo Promedio Cliente (MM:ss)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_01_medida.promedio_histórico_tiempo_luz_MMss": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "01_Medidas",
+			          "ConceptualProperty": "Promedio Histórico Tiempo Luz (MM:ss)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "promedio histórico tiempo luz (MM:ss)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "promedio histórico tiempo luz": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Tiempo Promedio Luz (MM:ss)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity_01_medida.conteo_impedimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "01_Medidas",
+			          "ConceptualProperty": "Conteo Impedimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "conteo impedimento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity_01_medida.impedimento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "01_Medidas",
+			          "ConceptualProperty": "% Impedimento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% impedimento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage impedimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "pct impedimento": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -14099,6 +14242,171 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "input_raw_have_input_majo_puros"
+			        }
+			      ]
+			    },
+			    "output_has_entity_01_medida_impedimento": {
+			      "Binding": {
+			        "ConceptualEntity": "output"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "output": {
+			          "Target": {
+			            "Entity": "output"
+			          }
+			        },
+			        "entity_01_medida.impedimento": {
+			          "Target": {
+			            "Entity": "entity_01_medida.impedimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "output"
+			            },
+			            "Object": {
+			              "Role": "entity_01_medida.impedimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "outputs_have__impedimento"
+			        }
+			      ]
+			    },
+			    "output_has_entity_01_medida_conteo_impedimento": {
+			      "Binding": {
+			        "ConceptualEntity": "output"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "output": {
+			          "Target": {
+			            "Entity": "output"
+			          }
+			        },
+			        "entity_01_medida.conteo_impedimento": {
+			          "Target": {
+			            "Entity": "entity_01_medida.conteo_impedimento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "output"
+			            },
+			            "Object": {
+			              "Role": "entity_01_medida.conteo_impedimento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "outputs_have_conteo_impedimento"
+			        }
+			      ]
+			    },
+			    "output_has_entity_01_medida_promedio_histórico_tiempo_luz_MMss": {
+			      "Binding": {
+			        "ConceptualEntity": "output"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "output": {
+			          "Target": {
+			            "Entity": "output"
+			          }
+			        },
+			        "entity_01_medida.promedio_histórico_tiempo_luz_MMss": {
+			          "Target": {
+			            "Entity": "entity_01_medida.promedio_histórico_tiempo_luz_MMss"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "output"
+			            },
+			            "Object": {
+			              "Role": "entity_01_medida.promedio_histórico_tiempo_luz_MMss"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "outputs_have_promedio_histórico_tiempo_luz_MMss"
+			        }
+			      ]
+			    },
+			    "output_has_entity_01_medida_promedio_histórico_tiempo_cliente_MMss": {
+			      "Binding": {
+			        "ConceptualEntity": "output"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "output": {
+			          "Target": {
+			            "Entity": "output"
+			          }
+			        },
+			        "entity_01_medida.promedio_histórico_tiempo_cliente_MMss": {
+			          "Target": {
+			            "Entity": "entity_01_medida.promedio_histórico_tiempo_cliente_MMss"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "output"
+			            },
+			            "Object": {
+			              "Role": "entity_01_medida.promedio_histórico_tiempo_cliente_MMss"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "outputs_have_promedio_histórico_tiempo_cliente_MMss"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_inicio_semana": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.inicio_semana": {
+			          "Target": {
+			            "Entity": "dim_calendario.inicio_semana"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.inicio_semana"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_inicio_semanas"
 			        }
 			      ]
 			    },

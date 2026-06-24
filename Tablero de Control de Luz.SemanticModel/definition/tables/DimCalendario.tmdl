@@ -47,6 +47,7 @@ table DimCalendario
 		summarizeBy: none
 		isNameInferred
 		sourceColumn: [MesCorto]
+		sortByColumn: MesNro
 
 		annotation SummarizationSetBy = Automatic
 

@@ -19,7 +19,7 @@
             "height": 300,
             "width": 169
           },
-          "zIndex": 1
+          "zIndex": 3
         },
         {
           "location": {
@@ -32,7 +32,7 @@
             "height": 128,
             "width": 169
           },
-          "zIndex": 2,
+          "zIndex": 4,
           "expandedHeight": 248
         },
         {
@@ -46,7 +46,7 @@
             "height": 300,
             "width": 169
           },
-          "zIndex": 3
+          "zIndex": 8
         },
         {
           "location": {
@@ -59,7 +59,7 @@
             "height": 198,
             "width": 237
           },
-          "zIndex": 5
+          "zIndex": 6
         },
         {
           "location": {
@@ -72,7 +72,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 5
         },
         {
           "location": {
@@ -85,7 +85,7 @@
             "height": 145,
             "width": 145
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
@@ -98,7 +98,7 @@
             "height": 297,
             "width": 163
           },
-          "zIndex": 0
+          "zIndex": 7
         },
         {
           "location": {
@@ -111,7 +111,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         }
       ],
       "name": "Todas las tablas",

@@ -4,10 +4,10 @@
   "position": {
     "x": 431.67173924277188,
     "y": 100.81155568973331,
-    "z": 8000,
+    "z": 15000,
     "height": 92,
     "width": 204,
-    "tabOrder": 8000
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -519,37 +519,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f47cfe403ad84086a7e7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "Cortaron Comunicación (Histórico)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5f7e718160b1a300a06a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "01_Medidas"
-              }
-            },
-            "Property": "% Cortaron Comunicación (Histórico)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

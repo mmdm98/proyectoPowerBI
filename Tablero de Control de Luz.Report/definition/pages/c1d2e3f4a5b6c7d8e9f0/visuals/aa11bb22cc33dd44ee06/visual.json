@@ -1,7 +1,14 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "aa11bb22cc33dd44ee06",
-  "position": { "x": 12, "y": 1392, "z": 105, "height": 260, "width": 620, "tabOrder": 105 },
+  "position": {
+    "x": 12,
+    "y": 1392,
+    "z": 6000,
+    "height": 260,
+    "width": 620,
+    "tabOrder": 6000
+  },
   "visual": {
     "visualType": "pivotTable",
     "query": {
@@ -11,34 +18,75 @@
             {
               "field": {
                 "Column": {
-                  "Expression": { "SourceRef": { "Entity": "DimCalendario" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCalendario"
+                    }
+                  },
                   "Property": "Inicio Semana"
                 }
               },
               "queryRef": "DimCalendario.Inicio Semana",
-              "nativeQueryRef": "Inicio Semana"
+              "nativeQueryRef": "Inicio Semana",
+              "active": true
             }
           ]
         },
         "Values": {
           "projections": [
             {
-              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "01_Medidas" } }, "Property": "Base de Datos" } },
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Base de Datos"
+                }
+              },
               "queryRef": "01_Medidas.Base de Datos",
               "nativeQueryRef": "Base de Datos"
             },
             {
-              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "01_Medidas" } }, "Property": "Contactados" } },
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Contactados"
+                }
+              },
               "queryRef": "01_Medidas.Contactados",
               "nativeQueryRef": "Contactados"
             },
             {
-              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "01_Medidas" } }, "Property": "Solicitaron Conexión" } },
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "Solicitaron Conexión"
+                }
+              },
               "queryRef": "01_Medidas.Solicitaron Conexión",
               "nativeQueryRef": "Solicitaron Conexión"
             },
             {
-              "field": { "Measure": { "Expression": { "SourceRef": { "Entity": "01_Medidas" } }, "Property": "% Sentimiento Positivo/Neutral" } },
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
+                  "Property": "% Sentimiento Positivo/Neutral"
+                }
+              },
               "queryRef": "01_Medidas.% Sentimiento Positivo/Neutral",
               "nativeQueryRef": "% Sentimiento Positivo/Neutral"
             }
@@ -50,15 +98,153 @@
       "title": [
         {
           "properties": {
-            "text": { "expr": { "Literal": { "Value": "'Comparación Semana a Semana'" } } },
-            "fontColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0F172A'" } } } } },
-            "fontSize": { "expr": { "Literal": { "Value": "13D" } } }
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Comparación Semana a Semana'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F172A'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
           }
         }
       ],
-      "background": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#FFFFFF'" } } } } } } } ],
-      "border": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "radius": { "expr": { "Literal": { "Value": "12D" } } } } } ]
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "10788f49936608306e6b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimCalendario"
+              }
+            },
+            "Property": "Inicio Semana"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5def91528723cb300b8c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Base de Datos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0d539b9491643d1c904e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Contactados"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ad03ea72a43043155678",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Solicitaron Conexión"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f73b7b70369b4e4eb8ea",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "% Sentimiento Positivo/Neutral"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

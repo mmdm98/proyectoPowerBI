@@ -1,7 +1,14 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "aa11bb22cc33dd44ee02",
-  "position": { "x": 12, "y": 958, "z": 101, "height": 290, "width": 620, "tabOrder": 101 },
+  "position": {
+    "x": 12,
+    "y": 958,
+    "z": 2000,
+    "height": 290,
+    "width": 620,
+    "tabOrder": 2000
+  },
   "visual": {
     "visualType": "clusteredColumnChart",
     "query": {
@@ -11,7 +18,11 @@
             {
               "field": {
                 "Column": {
-                  "Expression": { "SourceRef": { "Entity": "DimCalendario" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCalendario"
+                    }
+                  },
                   "Property": "Mes"
                 }
               },
@@ -26,7 +37,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Contactados"
                 }
               },
@@ -36,7 +51,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "01_Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "01_Medidas"
+                    }
+                  },
                   "Property": "Interactuaron con Luz"
                 }
               },
@@ -51,7 +70,11 @@
           {
             "field": {
               "Column": {
-                "Expression": { "SourceRef": { "Entity": "DimCalendario" } },
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DimCalendario"
+                  }
+                },
                 "Property": "Mes"
               }
             },
@@ -65,29 +88,71 @@
       "dataPoint": [
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#6366F1'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#6366F1'"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "selector": { "metadata": "01_Medidas.Contactados" }
+          "selector": {
+            "metadata": "01_Medidas.Contactados"
+          }
         },
         {
           "properties": {
-            "fill": { "solid": { "color": { "expr": { "Literal": { "Value": "'#10B981'" } } } } }
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#10B981'"
+                    }
+                  }
+                }
+              }
+            }
           },
-          "selector": { "metadata": "01_Medidas.Interactuaron con Luz" }
+          "selector": {
+            "metadata": "01_Medidas.Interactuaron con Luz"
+          }
         }
       ],
       "legend": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } },
-            "position": { "expr": { "Literal": { "Value": "'Top'" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            }
           }
         }
       ],
       "labels": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]
@@ -96,14 +161,78 @@
       "title": [
         {
           "properties": {
-            "text": { "expr": { "Literal": { "Value": "'Evolución Mensual: Contactados vs. Interactuaron'" } } },
-            "fontColor": { "solid": { "color": { "expr": { "Literal": { "Value": "'#0F172A'" } } } } },
-            "fontSize": { "expr": { "Literal": { "Value": "13D" } } }
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Evolución Mensual: Contactados vs. Interactuaron'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0F172A'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            }
           }
         }
       ],
-      "background": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "color": { "solid": { "color": { "expr": { "Literal": { "Value": "'#FFFFFF'" } } } } } } } ],
-      "border": [ { "properties": { "show": { "expr": { "Literal": { "Value": "true" } } }, "radius": { "expr": { "Literal": { "Value": "12D" } } } } } ]
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

@@ -23,11 +23,11 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "Cortaron Comunicación (Histórico)"
+                  "Property": "Cortaron ComunicaciÃ³n (HistÃ³rico)"
                 }
               },
-              "queryRef": "01_Medidas.Cortaron Comunicación (Histórico)",
-              "nativeQueryRef": "Cortaron Comunicación (Histórico)"
+              "queryRef": "01_Medidas.Cortaron ComunicaciÃ³n (HistÃ³rico)",
+              "nativeQueryRef": "Cortaron ComunicaciÃ³n (HistÃ³rico)"
             },
             {
               "field": {
@@ -37,12 +37,12 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "% Cortaron Comunicación (Histórico)"
+                  "Property": "% Cortaron ComunicaciÃ³n (HistÃ³rico)"
                 }
               },
-              "queryRef": "01_Medidas.% Cortaron Comunicación (Histórico)",
-              "nativeQueryRef": "% Cortaron (Histórico)",
-              "displayName": "% Cortaron (Histórico)"
+              "queryRef": "01_Medidas.% Cortaron ComunicaciÃ³n (HistÃ³rico)",
+              "nativeQueryRef": "% Cortaron (HistÃ³rico)",
+              "displayName": "% Cortaron (HistÃ³rico)"
             }
           ]
         }
@@ -57,7 +57,7 @@
                     "Entity": "01_Medidas"
                   }
                 },
-                "Property": "Cortaron Comunicación (Histórico)"
+                "Property": "Cortaron ComunicaciÃ³n (HistÃ³rico)"
               }
             },
             "direction": "Descending"
@@ -93,7 +93,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.% Contactados (Histórico)"
+            "metadata": "01_Medidas.% Contactados (HistÃ³rico)"
           }
         }
       ],
@@ -150,7 +150,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.% Contactados (Histórico)"
+            "metadata": "01_Medidas.% Contactados (HistÃ³rico)"
           }
         },
         {
@@ -171,7 +171,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.Contactados (Histórico)"
+            "metadata": "01_Medidas.Contactados (HistÃ³rico)"
           }
         },
         {
@@ -185,7 +185,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.Cortaron Comunicación (Histórico)"
+            "metadata": "01_Medidas.Cortaron ComunicaciÃ³n (HistÃ³rico)"
           }
         }
       ],
@@ -351,7 +351,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.% Contactados (Histórico)"
+            "metadata": "01_Medidas.% Contactados (HistÃ³rico)"
           }
         },
         {
@@ -376,7 +376,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.% Cortaron Comunicación (Histórico)"
+            "metadata": "01_Medidas.% Cortaron ComunicaciÃ³n (HistÃ³rico)"
           }
         },
         {
@@ -397,7 +397,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.Cortaron Comunicación (Histórico)"
+            "metadata": "01_Medidas.Cortaron ComunicaciÃ³n (HistÃ³rico)"
           }
         }
       ],
@@ -434,7 +434,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EFF4FF'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -465,7 +465,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1E3A8A'"
+                      "Value": "'#E5E7EB'"
                     }
                   }
                 }

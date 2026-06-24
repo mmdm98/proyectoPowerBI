@@ -23,10 +23,10 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "Promedio Histórico Tiempo Luz (MM:ss)"
+                  "Property": "Promedio HistÃ³rico Tiempo Luz (MM:ss)"
                 }
               },
-              "queryRef": "01_Medidas.Promedio Histórico Tiempo Luz (Minutos)",
+              "queryRef": "01_Medidas.Promedio HistÃ³rico Tiempo Luz (Minutos)",
               "nativeQueryRef": "Tiempo Promedio Luz (MM:ss)",
               "displayName": "Tiempo Promedio Luz (MM:ss)"
             }
@@ -235,7 +235,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EFF4FF'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -266,7 +266,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1E3A8A'"
+                      "Value": "'#E5E7EB'"
                     }
                   }
                 }
@@ -332,7 +332,7 @@
                 "Entity": "01_Medidas"
               }
             },
-            "Property": "Promedio Histórico Tiempo Luz (MM:ss)"
+            "Property": "Promedio HistÃ³rico Tiempo Luz (MM:ss)"
           }
         },
         "type": "Advanced"

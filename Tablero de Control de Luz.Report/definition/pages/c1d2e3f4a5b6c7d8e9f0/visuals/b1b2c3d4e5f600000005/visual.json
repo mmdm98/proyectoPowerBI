@@ -23,11 +23,11 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "Solicitaron Conexión"
+                  "Property": "Solicitaron ConexiÃ³n"
                 }
               },
-              "queryRef": "01_Medidas.Solicitaron Conexión",
-              "nativeQueryRef": "Solicitaron Conexión"
+              "queryRef": "01_Medidas.Solicitaron ConexiÃ³n",
+              "nativeQueryRef": "Solicitaron ConexiÃ³n"
             }
           ]
         }
@@ -234,7 +234,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EFF4FF'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -265,7 +265,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1E3A8A'"
+                      "Value": "'#E5E7EB'"
                     }
                   }
                 }

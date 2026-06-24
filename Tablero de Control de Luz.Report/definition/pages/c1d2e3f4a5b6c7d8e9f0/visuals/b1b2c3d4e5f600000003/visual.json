@@ -23,11 +23,11 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "Cortaron Comunicación"
+                  "Property": "Cortaron ComunicaciÃ³n"
                 }
               },
-              "queryRef": "01_Medidas.Cortaron Comunicación",
-              "nativeQueryRef": "Cortaron Comunicación"
+              "queryRef": "01_Medidas.Cortaron ComunicaciÃ³n",
+              "nativeQueryRef": "Cortaron ComunicaciÃ³n"
             }
           ]
         }
@@ -234,7 +234,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EFF4FF'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -265,7 +265,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1E3A8A'"
+                      "Value": "'#E5E7EB'"
                     }
                   }
                 }

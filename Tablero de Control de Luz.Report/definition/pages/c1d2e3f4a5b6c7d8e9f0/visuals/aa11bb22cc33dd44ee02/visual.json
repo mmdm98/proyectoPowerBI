@@ -93,7 +93,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#6366F1'"
+                      "Value": "'#7C3AED'"
                     }
                   }
                 }
@@ -164,7 +164,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Evolución Mensual: Contactados vs. Interactuaron'"
+                  "Value": "'EvoluciÃ³n Mensual: Contactados vs. Interactuaron'"
                 }
               }
             },

@@ -23,11 +23,11 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "Contactados (Histórico)"
+                  "Property": "Contactados (HistÃ³rico)"
                 }
               },
-              "queryRef": "01_Medidas.Contactados (Histórico)",
-              "nativeQueryRef": "Contactados (Histórico)"
+              "queryRef": "01_Medidas.Contactados (HistÃ³rico)",
+              "nativeQueryRef": "Contactados (HistÃ³rico)"
             },
             {
               "field": {
@@ -37,11 +37,11 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "% Contactados (Histórico)"
+                  "Property": "% Contactados (HistÃ³rico)"
                 }
               },
-              "queryRef": "01_Medidas.% Contactados (Histórico)",
-              "nativeQueryRef": "% Contactados (Histórico)"
+              "queryRef": "01_Medidas.% Contactados (HistÃ³rico)",
+              "nativeQueryRef": "% Contactados (HistÃ³rico)"
             }
           ]
         }
@@ -56,7 +56,7 @@
                     "Entity": "01_Medidas"
                   }
                 },
-                "Property": "Contactados (Histórico)"
+                "Property": "Contactados (HistÃ³rico)"
               }
             },
             "direction": "Descending"
@@ -92,7 +92,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.% Contactados (Histórico)"
+            "metadata": "01_Medidas.% Contactados (HistÃ³rico)"
           }
         }
       ],
@@ -142,7 +142,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.% Contactados (Histórico)"
+            "metadata": "01_Medidas.% Contactados (HistÃ³rico)"
           }
         },
         {
@@ -170,7 +170,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.Contactados (Histórico)"
+            "metadata": "01_Medidas.Contactados (HistÃ³rico)"
           }
         }
       ],
@@ -329,7 +329,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.% Contactados (Histórico)"
+            "metadata": "01_Medidas.% Contactados (HistÃ³rico)"
           }
         },
         {
@@ -350,7 +350,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.Contactados (Histórico)"
+            "metadata": "01_Medidas.Contactados (HistÃ³rico)"
           }
         }
       ]
@@ -371,7 +371,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EFF4FF'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -402,7 +402,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1E3A8A'"
+                      "Value": "'#E5E7EB'"
                     }
                   }
                 }

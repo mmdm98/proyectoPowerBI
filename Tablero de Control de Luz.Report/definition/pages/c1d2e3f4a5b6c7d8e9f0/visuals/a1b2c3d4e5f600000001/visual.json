@@ -23,11 +23,11 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "Base de Datos (Histórico)"
+                  "Property": "Base de Datos (HistÃ³rico)"
                 }
               },
-              "queryRef": "01_Medidas.Base de Datos (Histórico)",
-              "nativeQueryRef": "Base de Datos (Histórico)"
+              "queryRef": "01_Medidas.Base de Datos (HistÃ³rico)",
+              "nativeQueryRef": "Base de Datos (HistÃ³rico)"
             }
           ]
         }
@@ -234,7 +234,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EFF4FF'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -265,7 +265,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1E3A8A'"
+                      "Value": "'#E5E7EB'"
                     }
                   }
                 }
@@ -339,5 +339,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4cdbcbd04700b1aea115",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "01_Medidas"
+              }
+            },
+            "Property": "Base de Datos (HistÃ³rico)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

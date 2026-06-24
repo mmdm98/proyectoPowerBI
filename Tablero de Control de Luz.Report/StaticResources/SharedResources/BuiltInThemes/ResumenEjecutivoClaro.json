@@ -1,0 +1,61 @@
+{
+  "name": "ResumenEjecutivoClaro",
+  "dataColors": [
+    "#7C3AED",
+    "#10B981",
+    "#8B5CF6",
+    "#16A34A",
+    "#0EA5E9",
+    "#A78BFA",
+    "#F59E0B",
+    "#DC2626",
+    "#64748B",
+    "#22C55E",
+    "#6D28D9",
+    "#34D399",
+    "#0284C7",
+    "#EF4444",
+    "#94A3B8",
+    "#4C1D95"
+  ],
+  "foreground": "#1F2937",
+  "foregroundNeutralSecondary": "#4B5563",
+  "foregroundNeutralTertiary": "#9CA3AF",
+  "background": "#FFFFFF",
+  "backgroundLight": "#F3F4F6",
+  "backgroundNeutral": "#E5E7EB",
+  "tableAccent": "#7C3AED",
+  "good": "#22C55E",
+  "neutral": "#F59E0B",
+  "bad": "#DC2626",
+  "maximum": "#7C3AED",
+  "center": "#A78BFA",
+  "minimum": "#EDE9FE",
+  "null": "#94A3B8",
+  "hyperlink": "#7C3AED",
+  "visitedHyperlink": "#5B21B6",
+  "textClasses": {
+    "callout": { "fontFace": "Segoe UI", "color": "#111827" },
+    "title": { "fontFace": "Segoe UI Semibold", "fontSize": 13, "color": "#1F2937" },
+    "header": { "fontFace": "Segoe UI Semibold", "color": "#374151" },
+    "label": { "fontFace": "Segoe UI", "color": "#4B5563" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [ { "show": true, "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 } ],
+        "border": [ { "show": true, "color": { "solid": { "color": "#E5E7EB" } }, "radius": 8 } ],
+        "dropShadow": [ { "show": true } ],
+        "title": [ { "show": true, "fontColor": { "solid": { "color": "#1F2937" } }, "fontSize": 13, "fontFamily": "Segoe UI Semibold", "alignment": "left" } ],
+        "valueAxis": [ { "gridlineShow": false } ],
+        "categoryAxis": [ { "gridlineShow": false } ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [ { "color": { "solid": { "color": "#F3F4F6" } }, "transparency": 0 } ],
+        "outspace": [ { "color": { "solid": { "color": "#F3F4F6" } } } ]
+      }
+    }
+  }
+}

@@ -11,13 +11,13 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "ResumenEjecutivoPremium",
+      "name": "ResumenEjecutivoClaro",
       "reportVersionAtImport": {
         "visual": "2.6.0",
         "report": "3.1.0",
         "page": "2.3.0"
       },
-      "type": "RegisteredResources"
+      "type": "SharedResources"
     }
   },
   "objects": {
@@ -48,16 +48,10 @@
           "name": "CY26SU02",
           "path": "BaseThemes/CY26SU02.json",
           "type": "BaseTheme"
-        }
-      ]
-    },
-    {
-      "name": "RegisteredResources",
-      "type": "RegisteredResources",
-      "items": [
+        },
         {
-          "name": "ResumenEjecutivoPremium.json",
-          "path": "ResumenEjecutivoPremium.json",
+          "name": "ResumenEjecutivoClaro",
+          "path": "BuiltInThemes/ResumenEjecutivoClaro.json",
           "type": "CustomTheme"
         }
       ]

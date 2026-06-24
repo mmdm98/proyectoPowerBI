@@ -23,11 +23,11 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "Avisarán al Normalizar (Histórico)"
+                  "Property": "AvisarÃ¡n al Normalizar (HistÃ³rico)"
                 }
               },
-              "queryRef": "01_Medidas.Avisarán al Normalizar (Histórico)",
-              "nativeQueryRef": "Avisarán al Normalizar (Histórico)"
+              "queryRef": "01_Medidas.AvisarÃ¡n al Normalizar (HistÃ³rico)",
+              "nativeQueryRef": "AvisarÃ¡n al Normalizar (HistÃ³rico)"
             },
             {
               "field": {
@@ -37,12 +37,12 @@
                       "Entity": "01_Medidas"
                     }
                   },
-                  "Property": "% Avisarán al Normalizar (Histórico)"
+                  "Property": "% AvisarÃ¡n al Normalizar (HistÃ³rico)"
                 }
               },
-              "queryRef": "01_Medidas.% Avisarán al Normalizar (Histórico)",
-              "nativeQueryRef": "% Avisarán (Histórico)",
-              "displayName": "% Avisarán (Histórico)"
+              "queryRef": "01_Medidas.% AvisarÃ¡n al Normalizar (HistÃ³rico)",
+              "nativeQueryRef": "% AvisarÃ¡n (HistÃ³rico)",
+              "displayName": "% AvisarÃ¡n (HistÃ³rico)"
             }
           ]
         }
@@ -57,7 +57,7 @@
                     "Entity": "01_Medidas"
                   }
                 },
-                "Property": "Avisarán al Normalizar (Histórico)"
+                "Property": "AvisarÃ¡n al Normalizar (HistÃ³rico)"
               }
             },
             "direction": "Descending"
@@ -122,7 +122,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.Avisarán al Normalizar (Histórico)"
+            "metadata": "01_Medidas.AvisarÃ¡n al Normalizar (HistÃ³rico)"
           }
         },
         {
@@ -143,7 +143,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.% Avisarán al Normalizar (Histórico)"
+            "metadata": "01_Medidas.% AvisarÃ¡n al Normalizar (HistÃ³rico)"
           }
         }
       ],
@@ -295,7 +295,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.% Avisarán al Normalizar (Histórico)"
+            "metadata": "01_Medidas.% AvisarÃ¡n al Normalizar (HistÃ³rico)"
           }
         },
         {
@@ -316,7 +316,7 @@
             }
           },
           "selector": {
-            "metadata": "01_Medidas.Avisarán al Normalizar (Histórico)"
+            "metadata": "01_Medidas.AvisarÃ¡n al Normalizar (HistÃ³rico)"
           }
         }
       ]
@@ -337,7 +337,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EFF4FF'"
+                      "Value": "'#FFFFFF'"
                     }
                   }
                 }
@@ -368,7 +368,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1E3A8A'"
+                      "Value": "'#E5E7EB'"
                     }
                   }
                 }
